@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect, flash, ses
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
+import json
 
 # Init app
 app = Flask(__name__)
@@ -24,14 +25,13 @@ class Test(db.Model):
     status = db.Column(db.Integer, nullable=False)
     authkey = db.Column(db.String(100), nullable=False)
 
-    def __init__(self, teststep, testcase, description,url,status,authkey):
+    def __init__(self, teststep, testcase, description, url, status, authkey):
         self.teststep = teststep
         self.testcase = testcase
         self.description = description
         self.url = url
         self.status = status
         self.authkey = authkey
-
 
 
 # Test Schema
@@ -65,17 +65,17 @@ def add_product():
         new_test = Test(teststep, testcase, description, url, status, authkey)
         db.session.add(new_test)
         db.session.commit()
-        flash("Data added to database.","success")
+        flash("Data added to database.", "success")
         return redirect(request.referrer)
     else:
         all_products = Test.query.all()
         result = tests_schema.dump(all_products)
-        return jsonify(result)
-
+        return render_template('response.html', result=json.dumps(result),sort_keys=True,
+                      indent=4)
 
 
 # Get Single Products
-@app.route('/rest/update/<id>', methods=['POST','GET'])
+@app.route('/rest/update/<id>', methods=['POST', 'GET'])
 def get_product(id):
     test = Test.query.get_or_404(id)
     if request.method == 'POST':
@@ -91,7 +91,6 @@ def get_product(id):
         return redirect(request.referrer)
     else:
         return render_template('update.html', test=test)
-
 
 
 # Update a Product
