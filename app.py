@@ -8,6 +8,7 @@ app = Flask(__name__)
 # Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = 'vikash'
 # Init db
 db = SQLAlchemy(app)
 # Init ma
@@ -64,18 +65,33 @@ def add_product():
         new_test = Test(teststep, testcase, description, url, status, authkey)
         db.session.add(new_test)
         db.session.commit()
-        return redirect('/rest')
+        flash("Data added to database.","success")
+        return redirect(request.referrer)
     else:
         all_products = Test.query.all()
         result = tests_schema.dump(all_products)
         return jsonify(result)
 
 
+
 # Get Single Products
-@app.route('/product/<id>', methods=['GET'])
+@app.route('/rest/update/<id>', methods=['POST','GET'])
 def get_product(id):
-    product = Product.query.get(id)
-    return product_schema.jsonify(product)
+    test = Test.query.get_or_404(id)
+    if request.method == 'POST':
+        test.teststep = request.form['teststep']
+        test.testcase = request.form['testcase']
+        test.description = request.form['description']
+        test.url = request.form['url']
+        test.status = request.form['status']
+        test.authkey = request.form['key']
+        db.session.commit()
+        print("updated")
+        flash("Your data has been updated!", "success")
+        return redirect(request.referrer)
+    else:
+        return render_template('update.html', test=test)
+
 
 
 # Update a Product

@@ -16,44 +16,42 @@
 {% endfor %}
 {% endif %}
 {% endwith %}
-
-
 <div class="container register">
                 <div class="row">
                     <div class="col-md-3 register-left">
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
                         <h3>Welcome</h3>
-                         <p>Click Below to see Data</p>
+                         <p>Click to see Updated data</p>
                         <p class="text-center">
                            <a class=" btn btn-primary btn-sm" href="/rest" role="button">Click Here&raquo;</a>
                        </p>
                     </div>
-                    <form action="/rest" method="post" class="col-md-9 register-right">
+                    <form action="/rest/update/{{test.id}}" method="post" class="col-md-9 register-right">
                     <div class="col-md-9 register-right">
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">ADD DETAILS</h3>
+                                <h3 class="register-heading">UPDATE DETAILS</h3>
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="teststep" class="form-control" placeholder="Enter TestStep" value="" />
+                                            <input type="text" name="teststep" class="form-control" placeholder="Enter TestStep" value="{{test.teststep}}" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="testcase" class="form-control" placeholder="Enter TestCase" value="" />
+                                            <input type="text" name="testcase" class="form-control" placeholder="Enter TestCase" value="{{test.testcase}}" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="description" class="form-control" placeholder="Enter Description" value="" />
+                                            <input type="text" name="description" class="form-control" placeholder="Enter Description" value="{{test.description}}" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="url" class="form-control" placeholder="Enter Url" value="" />
+                                            <input type="text" name="url" class="form-control" placeholder="Enter Url" value="{{test.url}}" />
                                         </div>
                                         <div class="form-group">
-                                           <input type="text" name="status" class="form-control" placeholder="Enter Status code" value="" />
+                                           <input type="text" name="status" class="form-control" placeholder="Enter Status code" value="{{test.status}}" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="key" class="form-control" placeholder="Enter Auth key" value="" />
+                                            <input type="text" name="key" class="form-control" placeholder="Enter Auth key" value="{{test.authkey}}" />
                                         </div>
                                           <input type="submit" value="Submit">
                                     </div>
@@ -63,5 +61,4 @@
                     </div>
                     </form>
                 </div>
-
 </div>
