@@ -75,7 +75,7 @@ def add_product():
 
 
 # Get Single Products
-@app.route('/rest/update/<id>', methods=['POST', 'GET'])
+@app.route('/update/<id>', methods=['POST', 'GET'])
 def get_product(id):
     test = Test.query.get_or_404(id)
     if request.method == 'POST':
