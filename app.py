@@ -15,7 +15,6 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 
-# Product Class/Model
 class Test(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     teststep = db.Column(db.String(20), nullable=False)
