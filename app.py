@@ -5,9 +5,8 @@ import os
 
 # Init app
 app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
 # Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Init db
 db = SQLAlchemy(app)
@@ -20,17 +19,24 @@ class Test(db.Model):
     teststep = db.Column(db.String(20), nullable=False)
     testcase = db.Column(db.String(20), nullable=False)
     description = db.Column(db.String(200), nullable=False)
+    url = db.Column(db.String(100), nullable=False)
+    status = db.Column(db.Integer, nullable=False)
+    authkey = db.Column(db.String(100), nullable=False)
 
-    def __init__(self, teststep, testcase, description):
+    def __init__(self, teststep, testcase, description,url,status,authkey):
         self.teststep = teststep
         self.testcase = testcase
         self.description = description
+        self.url = url
+        self.status = status
+        self.authkey = authkey
+
 
 
 # Test Schema
 class TestSchema(ma.Schema):
     class Meta:
-        fields = ('id', 'teststep', 'testcase', 'description')
+        fields = ('id', 'teststep', 'testcase', 'description', 'url', 'status', 'authkey')
 
 
 test_schema = TestSchema()
@@ -49,7 +55,13 @@ def add_product():
         teststep = request.form['teststep']
         testcase = request.form['testcase']
         description = request.form['description']
-        new_test = Test(teststep, testcase, description)
+
+        url = request.form['url']
+        print(url)
+        status = request.form['status']
+        print(status)
+        authkey = request.form['key']
+        new_test = Test(teststep, testcase, description, url, status, authkey)
         db.session.add(new_test)
         db.session.commit()
         return redirect('/rest')
