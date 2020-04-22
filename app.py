@@ -56,7 +56,6 @@ def add_product():
         teststep = request.form['teststep']
         testcase = request.form['testcase']
         description = request.form['description']
-
         url = request.form['url']
         print(url)
         status = request.form['status']
@@ -70,8 +69,8 @@ def add_product():
     else:
         all_products = Test.query.all()
         result = tests_schema.dump(all_products)
-        return render_template('response.html', result=json.dumps(result),sort_keys=True,
-                      indent=4)
+        return render_template('response.html', result=json.dumps(result), sort_keys=True,
+                               indent=4)
 
 
 # Get Single Products
@@ -86,7 +85,6 @@ def get_product(id):
         test.status = request.form['status']
         test.authkey = request.form['key']
         db.session.commit()
-        print("updated")
         flash("Your data has been updated!", "success")
         return redirect(request.referrer)
     else:
@@ -97,31 +95,23 @@ def get_product(id):
 @app.route('/product/<id>', methods=['PUT'])
 def update_product(id):
     product = Product.query.get(id)
-
     name = request.json['name']
     description = request.json['description']
     price = request.json['price']
     qty = request.json['qty']
-
     product.name = name
     product.description = description
     product.price = price
     product.qty = qty
-
     db.session.commit()
-
     return product_schema.jsonify(product)
-
-
 # Delete Product
-@app.route('/product/<id>', methods=['DELETE'])
+@app.route('/delete/<id>', methods=['DELETE'])
 def delete_product(id):
-    product = Product.query.get(id)
-    db.session.delete(product)
+    test = Test.query.get(id)
+    db.session.delete(test)
     db.session.commit()
-
-    return product_schema.jsonify(product)
-
+    return product_schema.jsonify(test)
 
 # Run Server
 if __name__ == '__main__':
