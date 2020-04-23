@@ -49,7 +49,7 @@ def form():
     return render_template('form.html')
 
 def to_pretty_json(value):
-    return json.dumps(value, sort_keys=True,
+    return json.dumps(value, sort_keys=False,
                       indent=4, separators=(',', ': '))
 
 app.jinja_env.filters['tojson_pretty'] = to_pretty_json
@@ -78,7 +78,7 @@ def add_product():
 
 
 # Get Single Products
-@app.route('/update/<id>', methods=['POST', 'GET'])
+@app.route('/update/<int:id>', methods=['POST', 'GET'])
 def get_product(id):
     test = Test.query.get_or_404(id)
     if request.method == 'POST':
@@ -94,28 +94,13 @@ def get_product(id):
     else:
         return render_template('update.html', test=test)
 
-
-# Update a Product
-@app.route('/product/<id>', methods=['PUT'])
-def update_product(id):
-    product = Product.query.get(id)
-    name = request.json['name']
-    description = request.json['description']
-    price = request.json['price']
-    qty = request.json['qty']
-    product.name = name
-    product.description = description
-    product.price = price
-    product.qty = qty
-    db.session.commit()
-    return product_schema.jsonify(product)
-# Delete Product
-@app.route('/delete/<id>', methods=['DELETE'])
+@app.route('/delete/<int:id>',methods=['POST', 'GET'])
 def delete_product(id):
-    test = Test.query.get(id)
+    test = Test.query.get_or_404(id)
     db.session.delete(test)
     db.session.commit()
-    return product_schema.jsonify(test)
+    flash("Your Post has been deleted!", "danger")
+    return redirect('/rest')
 
 # Run Server
 if __name__ == '__main__':
