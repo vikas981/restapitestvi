@@ -26,7 +26,7 @@
                            <a class=" btn btn-primary btn-sm" href="/rest" role="button">Click Here&raquo;</a>
                        </p>
                     </div>
-                    <form action="/update/{{test.id}}" method="post" class="col-md-9 register-right">
+                    <form action="/delete/{{test.id}}" method="post" class="col-md-9 register-right">
                     <div class="col-md-9 register-right">
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -53,7 +53,7 @@
                                         <div class="form-group">
                                             <input type="text" name="key" class="form-control" placeholder="Enter Auth key" value="{{test.authkey}}" />
                                         </div>
-                                          <input type="submit" value="Update">
+                                          <input type="submit" href="/delete/{{test.id}}" value="delete">
                                     </div>
                                 </div>
                             </div>

@@ -48,6 +48,11 @@ tests_schema = TestSchema(many=True)
 def form():
     return render_template('form.html')
 
+def to_pretty_json(value):
+    return json.dumps(value, sort_keys=True,
+                      indent=4, separators=(',', ': '))
+
+app.jinja_env.filters['tojson_pretty'] = to_pretty_json
 
 # Create a Product
 @app.route('/rest', methods=['POST', 'GET'])
@@ -69,8 +74,7 @@ def add_product():
     else:
         all_products = Test.query.all()
         result = tests_schema.dump(all_products)
-        return render_template('response.html', result=json.dumps(result), sort_keys=True,
-                               indent=4)
+        return render_template('response.html', result=to_pretty_json(result))
 
 
 # Get Single Products
