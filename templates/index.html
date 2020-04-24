@@ -1,0 +1,1244 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#33b5e5">
+    <link rel="manifest" href="/manifest.json">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap">
+
+
+
+      <title>Bootstrap table editable plugin - examples &amp; tutorial. Basic &amp; advanced usage - Material Design for Bootstrap</title>
+
+    <link rel="shortcut icon" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/favicon.ico" />
+
+    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = 'https://mdbootstrap.com/wp-load.php';</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = 'https://mdbootstrap.com/wp-load.php';</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = 'https://mdbootstrap.com/wp-load.php';</script><link rel="alternate" hreflang="en" href="https://mdbootstrap.com/plugins/jquery/table-editor/" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	var gtm4wp_use_sku_instead        = 0;
+	var gtm4wp_id_prefix              = '';
+	var gtm4wp_remarketing            = false;
+	var gtm4wp_eec                    = 1;
+	var gtm4wp_classicec              = 1;
+	var gtm4wp_currency               = 'EUR';
+	var gtm4wp_product_per_impression = 0;
+	var gtm4wp_needs_shipping_address = false;
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- This site is optimized with the Yoast SEO plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Table editor is an extension that allows you to create customized, fully editable tables. Easy to use, setup and customize."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://mdbootstrap.com/plugins/jquery/table-editor/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Bootstrap table editable - examples &amp; tutorial. Basic &amp; advanced usage" />
+<meta property="og:description" content="Table editor is an extension that allows you to create customized, fully editable tables. Easy to use, setup and customize." />
+<meta property="og:url" content="https://mdbootstrap.com/plugins/jquery/table-editor/" />
+<meta property="og:site_name" content="Material Design for Bootstrap" />
+<meta property="article:publisher" content="https://www.facebook.com/mdbootstrap" />
+<meta property="article:author" content="https://www.facebook.com/piotr.glejzer" />
+<meta property="og:image" content="https://mdbootstrap.com/wp-content/uploads/2018/10/plugin-datatable-editor-jquery.jpg" />
+<meta property="og:image:secure_url" content="https://mdbootstrap.com/wp-content/uploads/2018/10/plugin-datatable-editor-jquery.jpg" />
+<meta property="og:image:width" content="700" />
+<meta property="og:image:height" content="367" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Table editor is an extension that allows you to create customized, fully editable tables. Easy to use, setup and customize." />
+<meta name="twitter:title" content="Bootstrap table editable - examples &amp; tutorial. Basic &amp; advanced usage" />
+<meta name="twitter:site" content="@MDBootstrap" />
+<meta name="twitter:image" content="https://mdbootstrap.com/wp-content/uploads/2018/10/plugin-datatable-editor-jquery.jpg" />
+<meta name="twitter:creator" content="@piotrglejzer" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mdbootstrap.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='https://mdbootstrap.com/wp-includes/css/dashicons.min.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='https://mdbootstrap.com/wp-includes/css/admin-bar.min.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://mdbootstrap.com/wp-includes/css/dist/block-library/style.min.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='https://mdbootstrap.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.14' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://mdbootstrap.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='wsl-widget-css'  href='https://mdbootstrap.com/wp-content/plugins/wordpress-social-login/assets/css/style.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-tm-admin-bar-css'  href='https://mdbootstrap.com/wp-content/plugins/wpml-translation-management/res/css/admin-bar-style.css?ver=2.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.16.0.min.css?ver=4.16.0' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mdw_search_object = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","search_tree":{"16":{"title":"bootstrap css - visual guide to css classes & components of bootstrap 4","description":"learn how to use bootstrap css at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16","wptitle":"MD Bootstrap CSS"},"26":{"title":"bootstrap typography - examples, tutorial & advanced usage","description":"bootstrap typography is the style and appearance of headings, lists, body text and basic paragraphs - 14 examples coming along with descriptions.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=26","wptitle":"Typography"},"97":{"title":"bootstrap modal - examples & tutorial. basic & advanced usage","description":"bootstrap modal is lightweight, but powerful & multipurpose popup. learn how to manipulate size, styles & position. multiple examples and detailed tutorial.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=97","wptitle":"Modals"},"105":{"title":"bootstrap scrollspy - examples & tutorial. basic & advanced usage","description":"bootstrap scrollspy is a plugin which shows on the navigation list current position on the page depends on the scroll position defined by the user.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=105","wptitle":"ScrollSpy"},"107":{"title":"bootstrap sidebar \/ sidenav - examples, tutorial & advanced usage","description":"bootstrap sidenav is a vertical navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=107","wptitle":"SideNav"},"111":{"title":"+70 bootstrap animations - examples & tutorial. basic & advanced usage","description":"bootstrap animations are illusions of motions for web elements. +70 animations generated by css only, work properly on every browser.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=111","wptitle":"Animations"},"170":{"title":"bootstrap carousel - examples, tutorial & advanced usage","description":"bootstrap carousel is responsive and interactive slideshow which is created for presenting content, especially images and videos.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=170","wptitle":"Carousel"},"290":{"title":"bootstrap panels - examples & tutorial. basic & advanced usage","description":"bootstrap panels are bordered boxes where you can place texts, lists, tables and other content. panels are similar to cards, but they don't include media.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=290","wptitle":"Panels"},"531":{"title":"bootstrap social buttons - examples & tutorial. basic & advanced usage","description":"bootstrap social buttons are buttons which are dedicated for social media usage. font awesome covers icons for all major platforms.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=531","wptitle":"Social buttons"},"1195":{"title":"material design logo generator","description":"over 600 icons with completely different and customizable styles coming in a form of user-friendly logo creator, free for both commercial and personal use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=1195","wptitle":"Material Design Logo Generator"},"1201":{"title":"bootstrap hover effects - examples & tutorial. basic & advanced usage","description":"bootstrap hover effect appears when a user positions computer cursor over an element without activating it. hover effects make a website more interactive.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=1201","wptitle":"Hover effects"},"2336":{"title":"bootstrap masks - examples & tutorial. basic & advanced usage","description":"bootstrap masks alter the visibility of an element by either partially or fully hiding it. masks are used to make content more visible in the picture.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=2336","wptitle":"CSS Masks"},"2818":{"title":"licensing details and usage restrictions","description":"you are granted the use of products under the conditions featured in the table. ownership stays with material design for bootstrap, along with the copyright holders and you must abide by the following terms and conditions.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=2818","wptitle":"License"},"3123":{"title":"bootstrap charts guideline - examples & tutorial. basic & advanced usage","description":"bootstrap charts are graphical representations of data. charts come in different sizes and shapes: bar, line, pie, radar, polar and more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=3123","wptitle":"Charts"},"3145":{"title":"md bootstrap changelog - detailed list of changes in the newest release","description":"material design for bootstrap provides a detailed list of changes in each release. read it carefully to do not miss any important update.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=3145","wptitle":"ChangeLog"},"4644":{"title":"bootstrap scrollbar & smoothscroll - examples & tutorial. basic & advanced usage","description":"bootstrap smooth scroll is an animated movement from a trigger - button, link or any other clickable element - to another place of the same page.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=4644","wptitle":"Scrollbar & smooth scroll"},"8237":{"title":"visual guide to bootstrap grid - examples, tutorial & advanced usage","description":"bootstrap grid is a system of columns and rows which is used for creating a page layout. mobile-friendly, responsive and can be rearranged depends on screen","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8237","wptitle":"Grid"},"8240":{"title":"bootstrap media - examples & tutorial. basic & advanced usage","description":"bootstrap media provides you with various ways of presenting images and videos to your audience thanks to bootstrap way of handling those elements.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8240","wptitle":"Media"},"8251":{"title":"bootstrap dropdown - examples & tutorial. basic & advanced usage","description":"bootstrap dropdown is a toggleable menu embedding additional links or content. it allows you to construct advanced navigation and link categorization.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8251","wptitle":"Dropdowns"},"8253":{"title":"bootstrap list group - examples & tutorial. basic & advanced usage","description":"bootstrap list groups are a flexible component which displays not only simple list of elements but complex custom content.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8253","wptitle":"List group"},"8255":{"title":"bootstrap labels and badges - examples, tutorial & advanced usage","description":"bootstrap labels and badges help you highlight additional information about the content. used for product badges, article tags and other labeling components","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8255","wptitle":"Labels and Badges"},"8257":{"title":"bootstrap progress bars \/ loaders - examples & tutorial. basic & advanced usage","description":"bootstrap progress bars \/ loader is a component which displays a progress of a process in which user is involved. their color, shape, and animation can be customized.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8257","wptitle":"Progress bars \/ loaders"},"8260":{"title":"bootstrap tabs - examples & tutorial. basic & advanced usage","description":"bootstrap tabs are components which separate content placed in the same wrapper but in the separate pane. only one pane can be displayed at the time.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8260","wptitle":"Tabs"},"8262":{"title":"bootstrap alerts guideline - examples & tutorial. basic & advanced usage","description":"bootstrap alerts are feedback messages which are displayed after specific actions preceded by the user. length of the text is not limited.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8262","wptitle":"Alerts"},"8265":{"title":"bootstrap date picker - examples, tutorial & advanced usage","description":"bootstrap date picker is a plugin that adds a function of selecting time without the necessity of using custom javascript code.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8265","wptitle":"Date Picker"},"8268":{"title":"bootstrap lightbox - examples, tutorial & advanced usage","description":"bootstrap lightbox is a group of images combined in one responsive gallery. elements are grouped in thumbnail grid, which can be displayed as a slideshow.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8268","wptitle":"LightBox"},"8274":{"title":"bootstrap popovers - examples & tutorial. basic & advanced usage","description":"bootstrap popover is a component which displays a box with a content after a click on an element - similar to the tooltip but can contain more content.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8274","wptitle":"Popovers"},"8278":{"title":"bootstrap tooltip - examples, tutorial & advanced usage","description":"bootstrap tooltips are little clouds with a brief text message, triggered by clicking on a specific element or hovering over it.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8278","wptitle":"Tooltips"},"8284":{"title":"bootstrap waves effect - examples & tutorial. basic & advanced usage","description":"bootstrap waves effect is an impression of circular overlay movement, triggered by clicking the object, flowing from the center of the click.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8284","wptitle":"Waves effect"},"8376":{"title":"bootstrap collapse - examples, tutorial & advanced usage","description":"bootstrap collapse is a component which toggles content. useful for grouping great amount of texts and\/or graphics into expanding and collapsing items.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8376","wptitle":"Collapse"},"8796":{"title":"bootstrap icons list - free and amaizing font awesome icons","description":"the biggest collection of bootstrap free icons. easy to use and customize. available in different colors, shapes, and size.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8796","wptitle":"Icons list"},"8842":{"title":"bootstrap time picker - examples & tutorial. basic & advanced usage","description":"bootstrap time picker is a jquery plugin which allows a user to select a time in the bootstrap form without the necessity of using custom javascript code.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8842","wptitle":"Time Picker1"},"8957":{"title":"half carousel template","description":"enhance your page with image carousel and add additional content below it thanks to half carousel template giving it both modern look and information value.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8957","wptitle":"Half Carousel Template"},"8959":{"title":"full page image carousel","description":"full page carousel template is a full page image background slider built using the material design for bootstrap carousel.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8959","wptitle":"Full Page Image Carousel"},"8961":{"title":"full background image template","description":"entertain your users and give your homepage more emotional weight by using this minimalistic full background image template.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8961","wptitle":"Full Background Image Template"},"8966":{"title":"full page video carousel template","description":"why would you limit your carousel to static photos only? now with new video carousel template, you can embed video as easy as pictures.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8966","wptitle":"Full Page Video Carousel"},"8968":{"title":"corporate style template","description":"corporate style template is a clean and elegant theme suitable for displaying your product, app, business and bring your clients the best value.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8968","wptitle":"Corporate Style Template"},"8975":{"title":"ecommerce homepage template","description":"free and exclusive ecommerce homepage template made especially for entrepreneurs who want to give their clients the best value.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8975","wptitle":"Ecommerce Homepage Template"},"8980":{"title":"ecommerce product page template","description":"ecommerce product page template is a fully customizable and suitable for e-commerce websites of any purpose coming with number of user-friendly components.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8980","wptitle":"Ecommerce Product Page Template"},"8983":{"title":"blog homepage template","description":"distinct your blog from the others by creating it in a spirit of material design and give it this enchanted form by using this blog homepage template.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8983","wptitle":"Blog Homepage Template"},"8986":{"title":"jumbotron with features template","description":"jumbotron template is a large, yet minimalistic form of design perfect for focusing your user\u2019s attention on most important features.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8986","wptitle":"Jumbotron with Features Template"},"8989":{"title":"bootstrap basic landing page template","description":"bootstrap basic landing page template made in material design style.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=8989","wptitle":"Basic Landing Page"},"9106":{"title":"bootstrap mobile gestures - examples & tutorial. basic & advanced usage","description":"bootstrap mobile gestures are touch-based interactions with mobile devices. various of different fingers movements indicate particular components responses.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=9106","wptitle":"Mobile"},"9123":{"title":"bootstrap stickycontent - examples & tutorial. basic & advanced usage","description":"bootstrap sticky content (affix) is a plugin which allows elements to be locked in the particular area of the page. often used in navigation menus.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=9123","wptitle":"StickyContent"},"9139":{"title":"browsers and devices","description":"mdbootstrap should display and function correctly the latest, stable releases of all major browsers and platforms. most mobile devices and deskopt browsers are supported.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=9139","wptitle":"Browsers and devices"},"9724":{"title":"1 column listing template","description":"a 1 column listing template is a most informative and comprehensible form of presenting your content to the users of yours.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=9724","wptitle":"One Column Listing"},"9728":{"title":"2 columns listing template","description":"fully responsive and mobile friendly two column layout containing multiple cards with a proper headline and a brief description.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=9728","wptitle":"Two Columns Listing"},"9733":{"title":"3 columns listing template","description":"showcase a larger group of content with a brief description in an eye-pleasant way in a form of 3 column listing template.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=9733","wptitle":"Three Columns Listing"},"10258":{"title":"bootstrap skins - examples & tutorial. basic & advanced usage","description":"bootstrap skins are basic color schemes which can be easily applied to any website providing ready-to-use full-page web design.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10258","wptitle":"Skins"},"10260":{"title":"bootstrap blog components - examples & tutorial. basic & advanced usage","description":"bootstrap blog components is a set of components which are dedicated to building a blog or any other content-oriented website.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10260","wptitle":"Blog Components"},"10263":{"title":"bootstrap e-commerce components - examples, tutorial & advance usage","description":"bootstrap e-commerce components is a set of components which are necessary to build online stores and any other e-commerce business.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10263","wptitle":"E-commerce components"},"10268":{"title":"bootstrap inputs - examples & tutorial. basic & advanced usage","description":"bootstrap input is a special field which is used in order to receive data from the user. used mostly in a variety of web-based forms.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10268","wptitle":"Inputs"},"10270":{"title":"bootstrap pagination - examples & tutorial. basic & advanced usage","description":"bootstrap pagination is a component used when content is divided into separate pages to display the page numbers and enable navigation between them.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10270","wptitle":"Pagination"},"10273":{"title":"bootstrap select - examples & tutorial. basic & advanced usage","description":"bootstrap select is a form control which after a click displays a collapsable list of multiple values which can be used in forms, menus or surveys.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10273","wptitle":"Select"},"10277":{"title":"material design blocks - 400+ stunning bootstrap 4 sections","description":"an impressive set of html\/css design blocks. multiple categories like e-commerce, dashboards, landing page, blog and many more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10277","wptitle":"Material Design Blocks"},"10279":{"title":"bootstrap blog sections - examples, tutorial & advanced usage","description":"bootstrap blog sections are a combination of standard bootstrap components that together create a consistent design perfect for blog pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10279","wptitle":"Blog sections"},"10282":{"title":"bootstrap contact sections - examples, tutorial & advanced usage","description":"bootstrap contact sections are a combination of standard bootstrap components that together create a consistent design perfect for contact pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10282","wptitle":"Contact sections"},"10284":{"title":"bootstrap e-commerce sections - examples, tutorial & advanced usage","description":"bootstrap e-commerce sections are a combination of standard bootstrap components that together create a consistent design perfect for e-commerce pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10284","wptitle":"E-commerce sections"},"10286":{"title":"bootstrap features sections - examples, tutorial & advanced usage","description":"bootstrap features sections are a combination of standard bootstrap components that together create a consistent design perfect for features pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10286","wptitle":"Features sections"},"10288":{"title":"bootstrap intros sections - examples, tutorial and advanced usage","description":"bootstrap intros sections are a combination of standard bootstrap components that together create a consistent design perfect for intros pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10288","wptitle":"Intros"},"10290":{"title":"bootstrap magazine sections - examples, tutorial & advanced usage","description":"bootstrap magazine sections are a combination of standard bootstrap components that together create a consistent design perfect for magazine pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10290","wptitle":"Magazine sections"},"10292":{"title":"bootstrap projects sections - examples, tutorial & advanced usage","description":"bootstrap projects sections are a combination of standard bootstrap components that together create a consistent design perfect for projects pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10292","wptitle":"Projects sections"},"10294":{"title":"bootstrap team sections - examples, tutorial & advanced usage","description":"bootstrap team sections are a combination of standard bootstrap components that together create a consistent design perfect for team pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10294","wptitle":"Team sections"},"10296":{"title":"bootstrap testimonials sections","description":"four forms of bootstrap testimonials sections, made with material design patterns, ready to be used on you own website project.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10296","wptitle":"Testimonials sections"},"10739":{"title":"md bootstrap newsletter - most important news, updates & tutorials","description":"md bootstrap newsletter - easy unsubscription, no spam messages. we'll write rarely, but only the best content. specify your preferences and stay up to date","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10739","wptitle":"Newsletter"},"10767":{"title":"bootstrap parallax - examples & tutorial. basic & advanced usage","description":"bootstrap parallax is a design effect visible while scrolling down - background image is moving at a different speed than the foreground content.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=10767","wptitle":"Parallax"},"11245":{"title":"bootstrap food order homepage","description":"food order homepage is fully customized template designed exclusively for restaurants and businesses related to the industry.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=11245","wptitle":"Food Order Homepage"},"11820":{"title":"material design for bootstrap affiliate program","description":"material design for bootstrap affiliate program gives you an opportunity to be a part of our success and resale mdb in variety of ways.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=11820","wptitle":"MDB Affiliate Program"},"11824":{"title":"material design for bootstrap sponsorship","description":"interested in cooperation with our team? plan your idea, set the dates and write to us! we are eager to participate in any important projects. learn more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=11824","wptitle":"Material Design for Bootstrap Sponsorship"},"11850":{"title":"free bootstrap 4 templates - stunning, responsive material design themes","description":"the biggest open source collection of stunning, free templates built with bootstrap 4 and material design. admin, e-commerce, landing page, blog and many more. free for personal and commercial use. fully responsive and cross-browser compatible.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=11850","wptitle":"Free Bootstrap Templates &amp; Themes"},"11885":{"title":"mdbootstrap - frequently asked questions","description":"here you can find all the answers to the most frequently asked questions related to mdbootstrap. write to us if you need more information.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=11885","wptitle":"MDBootstrap - Frequently Asked Questions"},"13575":{"title":"bootstrap social sections - examples, tutorial & advanced usage","description":"bootstrap social sections are a combination of standard bootstrap components that together create a consistent design perfect for social pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=13575","wptitle":"Social Sections"},"13708":{"title":"visual guide to bootstrap flexbox - examples, tutorial & advantage usage","description":"bootstrap flexbox is a utility for managing position of the items in a container and distributes space between them in a more efficient way.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=13708","wptitle":"Flexbox"},"15052":{"title":"bootstrap 4 beta released! read summary and tutorial.","description":"two years of development. 5,000 commits, 650+ files changed, 67,000 lines added, and 82,000 lines deleted. bootstrap 4 beta is finally here!","link":"https:\/\/mdbootstrap.com\/en\/?page_id=15052","wptitle":"Bootstrap 4 beta"},"15525":{"title":"contact us | material design for bootstrap","description":"need help? contact mdb to get the most detailed answer for product inquires, technical questions, license usage and more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=15525","wptitle":"Contact"},"16510":{"title":"bootstrap grid examples - examples & tutorial. basic & advanced usage","description":"bootstrap grid system allows you to create multiple combinations of columns and rows, changing the overall feeling of your project and its ui structure.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16510","wptitle":"Grid examples"},"16512":{"title":"bootstrap navigation \/ header - examples & tutorial. basic & advanced usage","description":"bootstrap navigation is a combination of navbar, sidenav, and footer in various forms and different functionalities like non-fixed navbar or hidden sidenav.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16512","wptitle":"Navigation \/ Bootstrap header"},"16514":{"title":"bootstrap utilities - examples & tutorial. basic & advanced usage","description":"bootstrap utilities for layout are a group of helpers, which is useful in showing, hiding, aligning, and spacing content.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16514","wptitle":"Utilities for layout"},"16518":{"title":"bootstrap code - examples & tutorial. basic & advanced usage","description":"bootstrap code is a set of classes class which is used for styling text as inline codes, variables, users inputs, sample outputs or blocks of code.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16518","wptitle":"Code"},"16520":{"title":"bootstrap figures - examples & tutorial. basic & advanced usage","description":"bootstrap figures are commonly used elements for displaying images with the caption. a caption can be left-aligned or right-align.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16520","wptitle":"Figures"},"16522":{"title":"bootstrap images - examples & tutorial. basic & advanced usage","description":"bootstrap images are automatically adjusted to all screen sizes - image will never be larger than parent elements. its styles can be changed via classes.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16522","wptitle":"Images"},"16526":{"title":"bootstrap borders - examples & tutorial. basic & advanced usage","description":"bootstrap borders are lines placed on the edges of buttons, images, and other web elements. additionally, border-radius class rounds the elements corners.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16526","wptitle":"Borders"},"16528":{"title":"bootstrap clearfix - examples & tutorial. basic & advanced usage","description":"bootstrap clearfix is a utility which to automatically clear child elements, so a user doesn't have to add additional markup.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16528","wptitle":"Clearfix"},"16530":{"title":"bootstrap close icon - examples & tutorial. basic & advanced usage","description":"bootstrap close icon is an element which is used for dismissing components like modals and alerts. see how easy implementation is.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16530","wptitle":"Close icon"},"16532":{"title":"bootstrap display - examples & tutorial. basic & advanced usage","description":"bootstrap display is a property which applies to many elements and specifies the type of rendering box used for an element.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16532","wptitle":"Display property"},"16534":{"title":"bootstrap image replacement - examples, tutorial & advanced usage","description":"image replacement is a utility that lets you swap text for background images by adding a single class.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16534","wptitle":"Image replacement"},"16536":{"title":"bootstrap visibility utilities - examples & tutorial. basic & advanced usage","description":"bootstrap visibility class allows controlling the visibility of elements without changing the display. this utility keep content visible for screen readers.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16536","wptitle":"Visibility"},"16538":{"title":"bootstrap position - examples & tutorial. basic & advanced usage","description":"bootstrap position utilities are helpful for quickly placing a component outside the normal document flow. see a handful of fixed position classes.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16538","wptitle":"Position"},"16540":{"title":"bootstrap embeds - examples & tutorial. basic & advanced usage","description":"bootstrap embeds is a utility which helps you insert video or slideshow in the page keeping width of the parent and scales on any device.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16540","wptitle":"Embeds"},"16542":{"title":"bootstrap screenreaders - examples & tutorial. basic & advanced usage","description":"bootstrap screenreaders is an assistive technology which hides elements on every device except screen readers with a single class.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16542","wptitle":"Screenreaders"},"16544":{"title":"bootstrap sizing - examples & tutorial. basic & advanced usage","description":"bootstrap sizing is a utility which allows you to adjust elements width or height. there are 4 available values: 25%, 50%, 75% and 100%.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16544","wptitle":"Sizing"},"16546":{"title":"bootstrap spacing - examples & tutorial. basic & advanced usage","description":"bootstrap spacing is a utility which assigns responsive margin or padding classes to elements to modify its display position.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16546","wptitle":"Spacing"},"16548":{"title":"bootstrap text utilities - examples & tutorial. basic & advanced usage","description":"bootstrap text utilities are a group of text modifiers which change text alignment, wrapping, letter capitalization, weight, and italics.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16548","wptitle":"Text utilities"},"16550":{"title":"bootstrap vertical align - examples & tutorial. basic & advanced usage","description":"bootstrap vertical align is a utility that specifies the alignment of elements. works with inline, inline-block, inline-table, and table cell elements only.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16550","wptitle":"Vertical align"},"16558":{"title":"bootstrap footer - examples & tutorial. basic & advanced usage","description":"bootstrap footer is an additional navigation for the website. it can hold links, buttons, company info, copyrights, forms and many other elements.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16558","wptitle":"Footer"},"16564":{"title":"bootstrap flipping cards - examples & tutorial. basic & advanced usage","description":"bootstrap flipping card is a card animation that gives an element effect of flipping to the other side upon the interaction.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16564","wptitle":"Flipping cards"},"16566":{"title":"bootstrap card animation - examples & tutorial. basic & advanced usage","description":"bootstrap card animations is a set of standard illusions of motions that can be applied to the bootstrap cards to improve the user experience.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=16566","wptitle":"Card animation"},"22665":{"title":"bootstrap layout - examples & tutorial. basic & advanced usage","description":"bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=22665","wptitle":"Layout"},"43902":{"title":"+300 bootstrap colors - examples & tutorial. basic & advanced usage","description":"bootstrap colors is a sensational palette of 300 delightful colors, which will aid you in creating inviting, consistent design.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43902","wptitle":"Colors"},"43903":{"title":"bootstrap shadows \/ material design shadows - examples, tutorial & usage","description":"bootstrap shadow is an effect used in web elements which provides important visual cues about objects' depth and directional movement.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43903","wptitle":"Shadows \/ Material Design shadows"},"43904":{"title":"bootstrap table - examples & tutorial. basic & advanced usage","description":"bootstrap tables - basic and advanced usage. fully functional, responsive examples with search and sort options & pagination, buttons & icons elements.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43904","wptitle":"Table"},"43905":{"title":"getting started with material design for bootstrap","description":"see how easy it is to install and use free material design for bootstrap ui kit. you need only 5 minutes to start creating stunning websites with no effort.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43905","wptitle":"Download"},"43906":{"title":"premium bootstrap templates - responsive bootstrap 4 themes","description":"stunning and responsive templates created by the google material design guidelines with the power of the newest bootstrap 4.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43906","wptitle":"Premium Bootstrap Templates &amp; Themes"},"43907":{"title":"bootstrap components - visual guide to components of bootstrap 4","description":"learn how to use bootstrap components at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43907","wptitle":"Components"},"43909":{"title":"bootstrap buttons - examples & tutorial. basic & advanced usage","description":"bootstrap buttons are components which are triggering a desirable user interaction. easy to customize in terms of size, shape, and color.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43909","wptitle":"Buttons"},"43910":{"title":"bootstrap cards - examples & tutorial. basic & advanced usage","description":"bootstrap cards are components which display content build of different elements with characteristic shadows, depth and hover effects.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43910","wptitle":"Cards"},"43911":{"title":"bootstrap forms - examples & tutorial. basic & advanced usage","description":"bootstrap forms are input-based components which are designed to collect users data. examples of login, register, subscription, contact & more forms.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43911","wptitle":"Forms"},"43912":{"title":"bootstrap icons - examples & tutorial. basic & advanced usage","description":"bootstrap icons usage is a quick tutorial which describes the proper way of using font awesome icons in bootstrap framework.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43912","wptitle":"Icons usage"},"43913":{"title":"bootstrap navbar - examples & tutorial. basic & advanced usage","description":"bootstrap navbar is a horizontal navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43913","wptitle":"Navbar"},"43966":{"title":"bootstrap jumbotron - examples & tutorial. basic & advanced usage","description":"bootstrap jumbotron is a responsive component which the main goal is to focus visitor's attention or highlight the special piece of information.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43966","wptitle":"Jumbotron"},"43968":{"title":"bootstrap iframe - examples & tutorial. basic & advanced usage","description":"bootstrap iframe is an html document which is embedded in another html doc on a web page. iframes are used to insert content from another source.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43968","wptitle":"IFrame"},"43969":{"title":"bootstrap float - examples & tutorial. basic & advanced usage","description":"bootstrap float is a utility which specified whether an element will be placed on the right or left side of a container. floating may be also disabled.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43969","wptitle":"Float"},"43970":{"title":"bootstrap steps (stepper) - examples & tutorial. basic & advanced usage","description":"bootstrap stepper is a component that displays content as a process with defined by user milestones. following steps are separated and connected by buttons.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43970","wptitle":"Steps (stepper)"},"43977":{"title":"bootstrap checkbox - examples & tutorial. basic & advanced usage","description":"bootstrap checkbox is a component used for allowing a user to make a multiple choice. broadly used in the forms and surveys.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43977","wptitle":"Checkbox"},"43980":{"title":"bootstrap multiselect - examples & tutorial. basic & advanced usage","description":"bootstrap multiselect is a jquery based plugin that allows users to tick multiple options from a standard bootstrap select.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=43980","wptitle":"Multiselect"},"45098":{"title":"bootstrap contact forms - examples & tutorial. basic & advanced usage","description":"bootstrap contact forms are components designed to collect users info in exchange for providing them information, promotions and content usually by emails.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45098","wptitle":"Contact form"},"45832":{"title":"bootstrap radio button - examples & tutorial. basic & advanced usage","description":"bootstrap radio buttons are option buttons, which allows users to choose one of a predefined set of two or more options. commonly used in forms and surveys.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45832","wptitle":"Radio button"},"45876":{"title":"bootstrap accordion - examples & tutorial. basic & advanced usage","description":"bootstrap accordion is a component which organizes content within collapsable items. accordion allows showing only one collapsed item at the same time.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45876","wptitle":"Accordion"},"45878":{"title":"bootstrap breadcrumb - examples & tutorial. basic & advanced usage","description":"bootstrap breadcrumbs are navigation elements which indicate a current location on the website. breadcrumbs show a hierarchy of the current location as well","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45878","wptitle":"Breadcrumb"},"45880":{"title":"bootstrap file input - examples & tutorial. basic & advanced usage","description":"bootstrap file input is a field which user can use to upload one or more files (photos, documents or any other file type) from the local storage.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45880","wptitle":"File Input"},"45885":{"title":"bootstrap gallery - examples & tutorial. basic & advanced usage","description":"bootstrap gallery is a component which compiles a number of media in one interactive collection presented in basic or more advanced lightboxes.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45885","wptitle":"Gallery"},"45921":{"title":"bootstrap textarea - examples & tutorial. basic & advanced usage","description":"bootstrap textarea is an input dedicated for a large volume of text. it may be used in a variety of components like forms, comment sections, and forums.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45921","wptitle":"Textarea"},"45930":{"title":"bootstrap modal form - examples & tutorial. basic & advanced usage","description":"bootstrap modal forms are displayed-on-action pop-up forms that used for gathering data from a website visitors and register or log users.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=45930","wptitle":"Modal Form"},"46002":{"title":"bootstrap search - examples & tutorial. basic & advanced usage","description":"bootstrap search is a component which enables a process of finding words, sentences, and numbers in the collection of documents, web pages or other sources.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46002","wptitle":"Search"},"46047":{"title":"bootstrap google map - examples & tutorial. basic & advanced usage","description":"bootstrap google map is a component which displays a map of an area defined by a user. maps can be used in components like forms and modals.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46047","wptitle":"Google Map"},"46062":{"title":"bootstrap switch \/ toggle - examples & tutorial. basic & advanced usage","description":"bootstrap switch \/ toggle is a simple component used for activating one of two predefined options. commonly used as an on\/off button.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46062","wptitle":"Switch \/ Bootstrap toggle"},"46094":{"title":"bootstrap slider - examples & tutorial. basic & advanced usage","description":"bootstrap slider is an interactive component that lets the user swiftly slide through possible values spread on the desired range.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46094","wptitle":"Slider"},"46216":{"title":"material design for bootstrap sitemap","description":"a clear and comprehensive group of lists with all the components and sections of the material design for bootstrap documentation.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46216","wptitle":"MD Bootstrap Sitemap"},"46281":{"title":"bootstrap mega menu - examples & tutorial. basic & advanced usage","description":"bootstrap mega menu is a navigation component which enhances standard navbar features. extended dropdown contains images and categorized links.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46281","wptitle":"Mega Menu"},"46338":{"title":"bootstrap input group","description":"bootstrap input group is a set of fields used for collecting data entered by users. usually containing buttons, text areas or other input.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46338","wptitle":"Input Group"},"46390":{"title":"bootstrap button group - examples & tutorial. basic & advanced usage","description":"bootstrap button groups are buttons grouped together in a single line with no space between them. they can be grouped both vertically and horizontally.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46390","wptitle":"Button Group"},"46641":{"title":"bootstrap edge header - introduction and code example","description":"bootstrap edge header is a full-width block located on the top of a page as a part of a background for a card. it is a unique material design component","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46641","wptitle":"Edge Header"},"46643":{"title":"bootstrap streak - examples & tutorial. basic & advanced usage","description":"bootstrap streak is a horizontal block containing text, uses to separate content sections or highlight some piece of information.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46643","wptitle":"Streak"},"46649":{"title":"bootstrap navs - examples & tutorial. basic & advanced usage","description":"bootstrap navs is a class which can transform a list of items into navigation components or tabs\/pills. navs helps to build more advanced components.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=46649","wptitle":"Navs"},"47032":{"title":"bootstrap hamburger menu - examples & tutorial. basic & advanced usage","description":"bootstrap hamburger menu is a navigation with additional hamburger looks-like icon which activates hidden menu elements in navbar or sidenav.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47032","wptitle":"Hamburger Menu"},"47063":{"title":"bootstrap pills - code examples, tutorial and use examples","description":"bootstrap pills are simple navigation components that expedite browsing through various options in the layout.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47063","wptitle":"Pills"},"47065":{"title":"bootstrap equal height columns - examples, tutorial & advanced usage","description":"bootstrap equal height columns is a utility which helps to keep columns size the same, no matter how much content will be placed inside.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47065","wptitle":"Equal Height Columns"},"47100":{"title":"bootstrap video - examples & tutorial. basic & advanced usage","description":"bootstrap video is a component which embeds a video file in dom. it can be used in carousels, modals, pages backgrounds or iframes.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47100","wptitle":"Video"},"47182":{"title":"bootstrap timeline - examples & tutorial. basic & advanced usage","description":"bootstrap timeline is a component which can be used to display content in chronological order. listed items may contain not only text but also images.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47182","wptitle":"Timeline"},"47250":{"title":"bootstrap icon button - examples & tutorial. basic & advanced usage","description":"bootstrap icon button is a combination of a standard bootstrap button with font awesome icon inside it. it may contain icon only or text with an icon.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47250","wptitle":"Button Icon"},"47263":{"title":"bootstrap modal events - examples & tutorial. basic & advanced usage","description":"bootstrap modal events is a set of js scripts that let you launch bootstrap modals based on an action performed by a website visitors.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47263","wptitle":"Modal Events"},"47290":{"title":"bootstrap gradients - examples & tutorial. basic & advanced usage","description":"bootstrap gradient is a linear color progression - a transition between two colors is fluent. gradient can be used in various of components.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47290","wptitle":"Gradients"},"47350":{"title":"bootstrap card layout - examples, tutorial & advanced usage","description":"bootstrap card layout is a design based on standard bootstrap card combined in different forms and with different functionalities.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47350","wptitle":"Card Layout"},"47479":{"title":"bootstrap media queries - examples & tutorial. basic & advanced usage","description":"bootstrap media queries are queries use for applying styles determined by the general type of the device, browsers characteristics or environment.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47479","wptitle":"Media Queries"},"47493":{"title":"bootstrap notification - examples & tutorial. basic & advanced usage","description":"bootstrap notification is a set of components which displays a static information or one generated in response to particular user on-site behavior.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47493","wptitle":"Notification"},"47532":{"title":"bootstrap responsive email templates - code, examples, tutorials","description":"bootstrap email templates is a set of pre-made, ready-to-use combination of buttons, images, and text designed to be sent via an email.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47532","wptitle":"Responsive email templates"},"47639":{"title":"bootstrap text color - examples & tutorial. basic & advanced usage","description":"bootstrap text color is a set of colors which can be used to change the font's color. color may be also changed when hovering a mouse over a text area.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47639","wptitle":"Text Color"},"47668":{"title":"bootstrap chat - examples & tutorial. basic & advanced usage","description":"bootstrap chat is a component dedicated for text-based communication between two or more users in real time. build with conversations list sidebar.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47668","wptitle":"Chat"},"47789":{"title":"bootstrap background image - examples, tutorial & advanced usage","description":"bootstrap background image is an illustration chosen by a user placed behind all other objects on the website. it may be full or partially visible.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=47789","wptitle":"Background Image"},"48278":{"title":"bootstrap autocomplete - examples & tutorial. basic & advanced usage","description":"bootstrap autocomplete is a component which predicts the words basing on the first few letters given by a user, while one is typing it.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=48278","wptitle":"Autocomplete"},"51243":{"title":"bootstrap 4 stable released! read summary and tutorial","description":"2,5 years of development. 6,000 commits, 650+ files changed, 67,000 lines added, and 82,000 lines deleted. bootstrap 4 stable is finally here!","link":"https:\/\/mdbootstrap.com\/en\/?page_id=51243","wptitle":"Bootstrap 4 stable"},"52102":{"title":"bootstrap modal styles - examples & tutorial. basic & advanced usage","description":"by using our predefined modal styles you can add some emotional weight to your information, ranging from a simple warning to critical system failure or from an operation success to a neutral information.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52102","wptitle":"Modal styles"},"52104":{"title":"bootstrap modal examples & templates","description":"multiple examples and advanced usage. modal cookies, coupon, discount, abandoned card, related content, poll, cart, youtube, product and many more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52104","wptitle":"Modal examples &amp; templates"},"52467":{"title":"bootstrap table responsive - examples & tutorial. basic & advanced usage","description":"responsive tables allow tables to be scrolled horizontally with ease. that means they can be comfortably used both on desktops and mobile devices.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52467","wptitle":"Table responsive"},"52470":{"title":"bootstrap table sort - examples & tutorial. basic & advanced usage","description":"bootstrap table sort functionality lets you sort the data of the tables according to any specific columns. it's easy to implement and use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52470","wptitle":"Table sort"},"52474":{"title":"bootstrap table search - examples & tutorial. basic & advanced usage","description":"bootstrap table search - super fast and easy to use searching functionality dedicated to bootstrap tables.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52474","wptitle":"Table search"},"52477":{"title":"bootstrap table scroll - examples & tutorial. basic & advanced usage","description":"bootstrap table scroll functionality works vertically (y axis) and horizontally (x axis). you can use it as an alternative for the pagination.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52477","wptitle":"Table scroll"},"52479":{"title":"bootstrap table pagination - examples & tutorial. basic & advanced usage","description":"table pagination is a simple navigation which lets you split a huge amount of content within the tables into smaller parts.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52479","wptitle":"Table pagination"},"52484":{"title":"bootstrap table editable - examples & tutorial. basic & advanced usage","description":"with editable bootstrap table, you can add and remove rows and change text and information within cells.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52484","wptitle":"Table editable"},"52505":{"title":"md bootstap cdn","description":"use bootstrapcdn to load css, javascript and font awesome icons with system of distributed servers. faster load times for web and mobile users.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=52505","wptitle":"MD Bootstrap CDN"},"53995":{"title":"admin dashboard free template - bootstrap 4 & material design","description":"free, responsive admin dashboard template containing different styles of dashboards, data presentations, and numerous insightful components. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=53995","wptitle":"Admin Dashboard Template - Bootstrap 4 &amp; Material Design"},"53997":{"title":"blog free template - bootstrap 4 & material design","description":"free, responsive blog template containing many types of engaging posts, author pages, and category pages. designed for storytellers. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=53997","wptitle":"Blog Template - Bootstrap 4 &amp; Material Design"},"53999":{"title":"coming soon free template - bootstrap 4 & material design","description":"free, responsive coming soon template containing animated, full-page intro and time counter.\u00a0 built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=53999","wptitle":"Coming Soon Template - Bootstrap 4 &amp; Material Design"},"54001":{"title":"ecommerce free template - bootstrap 4 & material design","description":"free, responsive ecommerce template containing many types of product pages, shopping carts, and different homepages with product presentations. designed for business. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=54001","wptitle":"Ecommerce Template - Bootstrap 4 &amp; Material Design"},"54003":{"title":"landing page free template - bootstrap 4 & material design","description":"free, responsive landing page template containing stunning, full or half-page intro, call to action buttons, forms, and many other crucial components. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=54003","wptitle":"Landing Page Template - Bootstrap 4 &amp; Material Design"},"54005":{"title":"magazine free template - bootstrap 4 & material design","description":"free, responsive magazine template containing many types of magazine newsfeeds and components designed for presentation huge amount of news. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=54005","wptitle":"Magazine Template - Bootstrap 4 &amp; Material Design"},"54007":{"title":"portfolio free template - bootstrap 4 & material design","description":"free, responsive portfolio template containing stunning, full-page intro and different types of galleries. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=54007","wptitle":"Portfolio Template - Bootstrap 4 &amp; Material Design"},"54009":{"title":"saas free template - bootstrap 4 & material design","description":"free, responsive saas template containing pages and components designed for companies owning a \"software as a service\" product. built with the newest bootstrap 4 and material design. mit license - free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=54009","wptitle":"Saas Template - Bootstrap 4 &amp; Material Design"},"57424":{"title":"bootstrap variables","description":"bootstrap variables are the storage locations paired with the associated symbolic names, which contain some known quantity of information referred to as the values.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=57424","wptitle":"Variables"},"59922":{"title":"bootstrap form validation - examples & tutorial. basic & advanced usage","description":"provide valuable, actionable feedback to your users with html5 form validation \u2013 available in all our supported browsers. choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter javascript.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=59922","wptitle":"Form validation"},"60545":{"title":"bootstrap table - styles & examples. basic & advanced usage","description":"extended bootstrap tables with additional elements like buttons, checkboxes, icons, panels & more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=60545","wptitle":"Table styles & examples"},"60547":{"title":"bootstrap 4 datatables - examples & tutorial. basic & advanced usage","description":"bootstrap 4 integration with the most popular plugin enhancing the possibilities of standard tables. available in material design or default bootstrap style.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=60547","wptitle":"Bootstrap 4 datatables1"},"60558":{"title":"bootstrap button generator - free, online editor for bootstrap 4 buttons","description":"bootstrap button generator - a simple and fast way to create a bootstrap 4 buttons with custom text, colors, sizes, and icons.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=60558","wptitle":"Button generator"},"60560":{"title":"bootstrap modal generator - free, online editor for bootstrap 4 modals","description":"bootstrap modal generator - a simple and fast way to create a bootstrap 4 modals with custom styles, sizes, animations and positions.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=60560","wptitle":"Modal generator"},"60800":{"title":"fluent design for bootstrap 4 - ui kit inspired by microsoft design system","description":"fluent design for bootstrap 4 - 100+ fluent ui elements, 1400+ fluent icons, css animations, scss files and many more. free for personal and commercial use.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=60800","wptitle":"Fluent Design UI KIT"},"61196":{"title":"bootstrap forms styles & customization","description":"learn how to easily customize bootstrap forms. use the following examples to adjust the forms to your needs and change their appearance.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=61196","wptitle":"Forms styles & customization"},"61270":{"title":"bootstrap navbar generator - free, online editor for bootstrap 4 navbars","description":"bootstrap navbar generator - a simple and fast way to create a bootstrap 4 navbar with custom styles, sizes and positions.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=61270","wptitle":"Navbar generator"},"61273":{"title":"bootstrap flexbox generator - free, online editor for bootstrap 4 flexbox","description":"bootstrap flexbox generator - a simple and fast way to test a bootstrap 4 flexbox.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=61273","wptitle":"Flexbox generator"},"75863":{"title":"bootstrap extended cards - examples & tutorial. basic & advanced usage","description":"cards dedicated to great range of data including weather info, promotions, retaurant and hotel bookings or even analytic metrics displayed in charts.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=75863","wptitle":"Extended Cards"},"76471":{"title":"md bootstrap plugins & addons - best extensions for the web projects","description":"multiple plugins and addons which enhance your bootstrap project. quick install, easy to use & customize. huge community and fast support.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=76471","wptitle":"MD Bootstrap plugins & addons"},"79412":{"title":"bootstrap color combinations. basic & advanced usage","description":"the material design color system can be used to create a color theme that reflects your brand or style.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=79412","wptitle":"Color combinations"},"80243":{"title":"bootstrap form builder - free, online drag and drop css form creator","description":"bootstrap form builder - a simple and fast way to create a fully coded and styled bootstrap 4 tables. available default and material design versions.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=80243","wptitle":"Form builder and generator - drag and drop"},"80392":{"title":"bootstrap sortable plugin - examples & tutorial. basic & advanced usage","description":"bootstrap sortable plugin is an extension that allows you to move, reorder, sort and organize elements on your website by using drag and drop functionality.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=80392","wptitle":"Sortable plugin"},"80397":{"title":"bootstrap drag and drop \/ draggable plugin - examples & tutorial. basic & advanced usage","description":"md bootstrap draggable plugin is an extension that allows you to move objects by clicking on them and dragging anywhere within the viewport.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=80397","wptitle":"Drag and drop \/ draggable plugin"},"80402":{"title":"bootstrap drag and drop file upload - examples & tutorial. basic & advanced usage","description":"md bootstrap file upload plugin is an extension that allows you to upload files by using drag and drop functionality. easy to use, setup and customize.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=80402","wptitle":"Drag and drop file upload"},"80412":{"title":"bootstrap table editable plugin - examples & tutorial. basic & advanced usage","description":"table editor is an extension that allows you to create customized, fully editable tables. easy to use, setup and customize.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=80412","wptitle":"Table editable"},"80698":{"title":"%%title%% - examples & tutorial. basic & advanced usage","description":"%%excerpt%% bootstrap preloaders (also known as loaders) are simple animations that are used to keep visitors entertained while the page is still loading, which helps to increase the user experience.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=80698","wptitle":"Loader \/ Spinner"},"81208":{"title":"bootstrap material design ui kit - world's most popular & free ui framework","description":"material design for bootstrap - trusted by over 1,000000 developers and designers. easy to use & customize. 500+ material ui elements, templates & tutorials.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=81208","wptitle":"Material Design for Bootstrap 4"},"81542":{"title":"bootstrap javascript usage","description":"bring bootstrap to life with our optional javascript plugins built on jquery. learn about each plugin, our data and programmatic api options, and more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=81542","wptitle":"JavaScript usage"},"81919":{"title":"bootstrap filter plugin - examples & tutorial. basic & advanced usage","description":"md bootstrap filter is an extension perfect for introducing vistors to a number of images, which can be freely filtered depending on the category.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=81919","wptitle":"Filter"},"81924":{"title":"bootstrap carousel 3d","description":"md bootstrap carousel 3d plugin is a three dimensional slideshow component perfect for cycling through elements, especially images.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=81924","wptitle":"Carousel 3D"},"81961":{"title":"bootstrap full screen scroller - examples & tutorial","description":"bootstrap full screen scroller plugin creates amazing one-page vertically and horizontally scrolling application with mouse and keyboard steering.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=81961","wptitle":"Full Screen Scroller"},"82011":{"title":"bootstrap vector map - examples & tutorial. basic & advanced usage","description":"md bootstrap vector map plugin helps you to show beautiful, scalable maps of the world, continents and countries. easy to use, setup and customize. no api key needed - no hussle.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=82011","wptitle":"Vector map"},"82040":{"title":"bootstrap full calendar - examples & tutorial. basic & advanced usage","description":"bootstrap full calendar plugin is an extension that allows you to create calendar functionality.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=82040","wptitle":"JQuery - Full Calendar"},"82043":{"title":"bootstrap color picker - examples & tutorial. basic & advanced usage","description":"bootstrap color picker plugin allows you to select different colors. you can successfully use it in various product wizards, clothing sales, or other situations where you need to be able to choose a color.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=82043","wptitle":"JQuery - Color Picker"},"82051":{"title":"bootstrap wysiwyg editor - examples & tutorial. basic & advanced usage","description":"bootstrap wysiwyg editor is a lightweight plugin that enables rich text editing on your website - text formatting, color manipulation, inserting links and images.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=82051","wptitle":"WYSIWYG Editor"},"83978":{"title":"bootstrap center (horizontal align)","description":"you can center any element (text, images, div, buttons) horizontally by using center utilities or flexbox. see examples.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=83978","wptitle":"Center (horizontal align)"},"84316":{"title":"bootstrap overflow - examples & tutorial. basic & advanced usage","description":"bootstrap overflow are lines placed on the edges of buttons, images, and other web elements. additionally, border-radius class rounds the elements corners.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=84316","wptitle":"Overflow"},"84708":{"title":"bootstrap masonry - examples & tutorial. basic & advanced usage","description":"bootstrap masonry is a grid layout based on columns","link":"https:\/\/mdbootstrap.com\/en\/?page_id=84708","wptitle":"Masonry"},"85430":{"title":"bootstrap responsive font size guideline - examples, tutorial & advanced usage","description":"%%excerpt%% %%excerpt%% bootstrap rfs is a font size engine which automatically calculates the appropriate font size based on the dimensions of the browser viewport.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=85430","wptitle":"Responsive Font Size"},"85926":{"title":"bootstrap treeview - examples & tutorial. basic & advanced usage","description":"bootstrap treeview represents a hierarchical view of information, where each item can have a number of subitems.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=85926","wptitle":"Treeview"},"86285":{"title":"bootstrap star rating plugin","description":"bootstrap star rating plugin can be used to allow the users to share their opinion about the product, documentation page, photo and more.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=86285","wptitle":"Star rating"},"87362":{"title":"bootstrap flags - examples & tutorial. basic & advanced usage","description":"bootstrap flag is used to represent a political state.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=87362","wptitle":"Flags"},"89567":{"title":"","description":"%%excerpt%% learning jquery with our tutorial is super-easy. multiple examples and online editor will help you to understand every aspect of jquery in the shortest possible way.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=89567","wptitle":"JQuery Tutorial \u2013 easy & free jQuery course for beginners"},"90129":{"title":"bootstrap simple charts - examples & tutorial. basic & advanced usage","description":"lightweight plugin to render simple, animated and retina optimized pie charts with customization option.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=90129","wptitle":"Simple Charts"},"90566":{"title":"bootstrap tags and chips - examples, tutorial & advanced usage","description":"bootstrap tags and chips categorize content with the use of text and icons. tags & chips make it easier to browse throughout articles, comments or pages.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=90566","wptitle":"Tags and Chips"},"102429":{"title":"material design for bootstrap installation guide","description":"download zip package to get the compiled css and javascript, source code or install mdbootstrap using npm. you can also use cdn for quick start.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=102429","wptitle":"Installation Guide"},"107503":{"title":"md bootstrap jquery visual studio code snippets","description":"add visual studio code snippets for mdb jquery bootstrap ui kit to your code editor and boost your coding productivity. start using vscode shortcuts","link":"https:\/\/mdbootstrap.com\/en\/?page_id=107503","wptitle":"MDB jQuery Visual Studio Snippets"},"111190":{"title":"styles customization - material design for bootstrap","description":"set of rules applied to the css selectors that allow to determine which style is applied to an element. add custom css styles to overwrite mdb styles.","link":"https:\/\/mdbootstrap.com\/en\/?page_id=111190","wptitle":"Styles customization"}}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shareCountsData = {"oldShareCounts":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en_US":"https:\/\/mdbootstrap.com\/plugins\/jquery\/table-editor\/","en":"https:\/\/mdbootstrap.com\/plugins\/jquery\/table-editor\/","US":"https:\/\/mdbootstrap.com\/plugins\/jquery\/table-editor\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"mdbootstrap.com","path":"\/","expiration":24}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-admin/load-scripts.php?c=gzip&amp;load%5Bchunk_0%5D=jquery-core,jquery-migrate&amp;ver=5.4'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/bitpay-checkout-for-woocommerce/js/bitpayquickpay_js.js?ver=5.4'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-classic.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-enhanced.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/mdb-search.js?ver=4.7.3'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/tutorial-share-counts.js?ver=4.16.0-update.3'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/sitepress-multilingual-cms/dist/js/browser-redirect/app.js?ver=4.3.11'></script>
+<link rel='https://api.w.org/' href='https://mdbootstrap.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mdbootstrap.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mdbootstrap.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.4" />
+<meta name="generator" content="WooCommerce 4.0.1" />
+<link rel='shortlink' href='https://mdbootstrap.com/?p=80412' />
+<link rel="alternate" type="application/json+oembed" href="https://mdbootstrap.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmdbootstrap.com%2Fplugins%2Fjquery%2Ftable-editor%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://mdbootstrap.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmdbootstrap.com%2Fplugins%2Fjquery%2Ftable-editor%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.3.11 stt:65,1;" />
+        <!-- Push Notifications user -->
+        <script>
+            var wp_ajaxurl = "https://mdbootstrap.com/wp-admin/admin-ajax.php";
+
+
+        </script>
+        <!--/.Push Notifications user -->
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
+	var dataLayer_content = {"customerTotalOrders":0,"customerTotalOrderValue":"0.00","customerFirstName":"","customerLastName":"","customerBillingFirstName":"","customerBillingLastName":"","customerBillingCompany":"","customerBillingAddress1":"","customerBillingAddress2":"","customerBillingCity":"","customerBillingPostcode":"","customerBillingCountry":"","customerBillingEmail":"","customerBillingPhone":"","customerShippingFirstName":"","customerShippingLastName":"","customerShippingCompany":"","customerShippingAddress1":"","customerShippingAddress2":"","customerShippingCity":"","customerShippingPostcode":"","customerShippingCountry":""};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7MBMN');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://mdbootstrap.com/wp-content/uploads/2016/11/cropped-ms-icon-310x310-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://mdbootstrap.com/wp-content/uploads/2016/11/cropped-ms-icon-310x310-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://mdbootstrap.com/wp-content/uploads/2016/11/cropped-ms-icon-310x310-180x180.png" />
+<meta name="msapplication-TileImage" content="https://mdbootstrap.com/wp-content/uploads/2016/11/cropped-ms-icon-310x310-270x270.png" />
+    <script> var currency = '€'; </script>
+    <meta name="p:domain_verify" content="ba4bb1f26dcf05eadc4ea92722eca381"/>
+
+
+<!-- Ahref verification -->
+<meta name="ahrefs-site-verification" content="cd945a30a32beb9f20f22626c5f801f2063a726c6fd9af1db55ce27eafaa1e45">
+
+</head>
+
+<body class="fixed-sn mdb-skin-custom" data-spy="scroll" data-target="#scrollspy" data-offset="15">
+
+
+
+
+
+<style>
+  .switch-version {
+    z-index: 1000;
+  }
+  .switch-off {
+    display: none;
+  }
+  .switch-title {
+    font-size: 11px;
+  }
+  .switch-web {
+    border-top: 1px solid #33b5e5;
+    border-left: 1px solid #33b5e5;
+    color: #6b6e72;
+    border-top-left-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .switch-mobile {
+    border-bottom: 1px solid #FF8800;
+    border-left: 1px solid #FF8800;
+    color: #6b6e72;
+    border-bottom-left-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .switch-web.active, .switch-web:not(.active):hover {
+    color: white;
+    background-color: #33b5e5;
+  }
+  .switch-mobile.active, .switch-mobile:not(.active):hover {
+    color: white;
+    background-color: #FF8800;
+  }
+  .switch-web i, .switch-mobile i {
+    position: relative;
+    top: 4px;
+  }
+  .switch-web span, .switch-mobile span {
+    width: 100%;
+    position: relative;
+    top: -4px;
+  }
+  .switch-web-products {
+    border-left: 1px solid #33b5e5;
+  }
+  .switch-mobile-products {
+    border-left: 1px solid #FF8800;
+  }
+  .switch-version a:last-child>.switch-to {
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .switch-version a:first-child>.switch-to {
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .switch-to-mobile.mdb-vue-mobile {
+    background-image: url('https://mdbootstrap.com/img/logo/mdb-angular.png');
+    background-position: 0 -84px;
+  }
+  .switch-to-mobile.mdb-angular-mobile {
+    background-image: url('https://mdbootstrap.com/img/logo/mdb-angular.png');
+    background-position: 0 0;
+  }
+  .switch-to-mobile.mdb-react-mobile {
+    background-image: url('https://mdbootstrap.com/img/logo/mdb-angular.png');
+    background-position: 0 -123px;
+  }
+</style>
+
+      <style>
+        .main-tabs-docs .nav-mtd {
+          white-space: nowrap;
+          overflow-x: auto;
+          position: relative;
+        }
+
+        @media (min-width: 62rem) {
+          .main-tabs-docs .nav-mtd {
+            overflow-x: hidden;
+          }
+        }
+
+        .main-tabs-docs .nav-mtd li a {
+          display: block;
+          padding: 20px 24px;
+          font-size: 13px;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          font-weight: 500;
+          border-bottom: 3px solid #33b5e5;
+        }
+
+        .main-tabs-docs .nav-mtd li a.active {
+          border-bottom: 3px solid;
+          color: #fff;
+        }
+
+        @media (min-width: 62em) {
+          .main-tabs-docs .nav-mtd li:first-child {
+            margin-left: 56px;
+          }
+        }
+
+        .documentation .primary-heading {
+          font-size: 2.7rem;
+          font-weight: 500;
+        }
+
+        .documentation .secondary-heading {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: #444343;
+          overflow: hidden;
+          padding-bottom: .3rem;
+          margin-bottom: .7rem;
+        }
+
+        .documentation .section-heading {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-bottom: 1.4rem;
+        }
+
+        .documentation .docs-pills {
+          margin-top: 1.4rem;
+        }
+
+        .documentation .section-preview {
+          border: 1px solid #e0e0e0;
+          padding: 15px;
+        }
+
+        @media only screen and (max-width: 991px) {
+
+          .sticky,
+          .sticky2,
+          .sticky3,
+          .sticky-placeholder {
+            display: none;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .documentation .docs-pills .export-to-snippet {
+            display: none;
+          }
+
+          .documentation .docs-pills .btn-copy-code {
+            right: 0 !important;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .documentation .docs-pills .btn-copy-code {
+            display: none;
+          }
+        }
+      </style>
+
+      <main>
+
+        <div class="container-fluid mt-2">
+
+          <!-- Main docs tabs -->
+          <div class="main-tabs-docs">
+
+            <!-- Nav tabs -->
+
+
+            <div class="tab-content">
+                              <!--Overview-->
+                <div class="tab-pane fade in show active" id="docsTabsOverview" role="tabpanel">
+
+                  <!--Grid row-->
+                  <div class="row">
+
+                    <!--Grid column: Content-->
+                    <div class="col-lg-10 col-md-12">
+                      <!--Edit & rate-->
+                      <div class="d-flex justify-content-end">
+
+                        <span class="popover-form-container rate-tooltip" data-page-id="80412">
+                                                      <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="0" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top" data-content="" title=""></i>
+                                                      <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="1" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top" data-content="" title=""></i>
+                                                      <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="2" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top" data-content="" title=""></i>
+                                                      <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="3" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top" data-content="" title=""></i>
+                                                      <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="4" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top" data-content="" title=""></i>
+                                                  </span>
+                      </div>
+                      <!--/Edit & rate-->
+                      <!--Section: Docs content-->
+                      <section class="documentation">
+                        <!--Section: Intro-->
+<section id="introduction">
+  <style>
+    .bubble-main{position:absolute;width:300px;box-shadow:0 12px 30px 0 rgba(0,0,0,.5);z-index:1050;background:#fff;box-sizing:border-box;border-radius:6px}.d-flex-not-important{display:flex}.bubble-td-cursor{cursor:pointer}.bubble-input-add-icon,.bubble-input-delete-icon{cursor:pointer}.bubble-input-add-icon:hover,.bubble-input-delete-icon:hover{transform:scale(1.1)}.disabled-btn,.disabled-table{pointer-events:none}.bubble-arrow,.bubble-arrow-rotate{position:absolute;border-top:45px solid #fff;border-right:45px solid transparent;border-bottom:45px solid transparent;border-left:45px solid transparent;transform:scale(.25);z-index:1051;top:-34px;left:0}.bubble-arrow-rotate{transform:rotate(-270deg)}.bubble-bg{position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.3);z-index:1049}.tr-color-selected{background-color:rgba(52,181,229,.3)!important;transition:all .2s ease-in}.closeByClick{transition:opacity .15s linear;position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,.2);z-index:1090}
+div.dataTables_wrapper div.dataTables_filter select,div.dataTables_wrapper div.dataTables_length input,div.dataTables_wrapper div.dataTables_length select{width:auto}table.dataTable thead{cursor:pointer}div.dataTables_wrapper div.dataTables_length.d-flex.flex-row label{margin-top:1.2rem;margin-right:1rem}div.dataTables_wrapper div.dataTables_length.d-flex.flex-row .select-wrapper.mdb-select .select-dropdown,div.dataTables_wrapper div.dataTables_length.d-flex.flex-row .select-wrapper.mdb-select span{margin-top:1rem}div.dataTables_wrapper div.dataTables_filter label,div.dataTables_wrapper div.dataTables_length label{text-align:left;font-weight:400;padding-top:.5rem;padding-bottom:.5rem}div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{font-weight:400;padding-top:1rem;padding-bottom:1rem}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter input{width:auto;margin-left:.5rem;display:inline-block}div.dataTables_wrapper div.dataTables_paginate{text-align:right;margin:0}div.dataTables_wrapper div.dataTables_paginate ul.pagination{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item.active .page-link:focus{background-color:#4285f4}div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item .page-link:focus{-webkit-box-shadow:none;box-shadow:none}@media (max-width:767px){div.dataTables_wrapper div .dataTables_filter,div.dataTables_wrapper div .dataTables_info,div.dataTables_wrapper div .dataTables_length,div.dataTables_wrapper div .dataTables_paginate ul.pagination{text-align:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}}.bs-select select{display:inline-block!important}table.dataTable thead>tr>td.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc{padding-right:30px}table.dataTable thead>tr>td:active,table.dataTable thead>tr>th:active{outline:0}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting:before,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_asc:before,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_asc_disabled:before,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_desc:before,table.dataTable thead .sorting_desc_disabled:after,table.dataTable thead .sorting_desc_disabled:before{position:absolute;bottom:.9em;display:block;opacity:.3}table.dataTable thead .sorting:before,table.dataTable thead .sorting_asc:before,table.dataTable thead .sorting_asc_disabled:before,table.dataTable thead .sorting_desc:before,table.dataTable thead .sorting_desc_disabled:before{right:1em;content:"\f0de";font-family:'Font Awesome\ 5 Free';font-weight:900;font-size:1rem}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_desc_disabled:after{content:"\f0dd";font-family:'Font Awesome\ 5 Free';font-weight:900;right:16px;font-size:1rem}table.dataTable thead .sorting_asc:before,table.dataTable thead .sorting_desc:after{opacity:1}table.dataTable thead .sorting_asc_disabled:before,table.dataTable thead .sorting_desc_disabled:after{opacity:0}
+
+</style>
+
+  <section class="p-1">
+
+    <div class="wrapper-editor">
+
+
+      <div class="block">
+        <div class="d-flex justify-content-center">
+          <p class="h5 text-primary createShowP">0 row selected</p>
+        </div>
+      </div>
+        <form>
+      <div class="row d-flex justify-content-center modalWrapper">
+        <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add Details</h4>
+                <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <input type="text" id="testStep" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="testStep">TestStep</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="testCase" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="testCase">TestCase</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="description" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="description">Description</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="url" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="url">Url</label>
+                </div>
+
+                 <div class="md-form mb-5">
+                  <input type="text" id="statusCode" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="statusCode">Status</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="authKey" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="authKey">AuthKey</label>
+                </div>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+                <button class="btn btn-outline-primary btn-block buttonAdd" data-dismiss="modal">Add
+                  <i class="fas fa-paper-plane-o ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="" class="btn btn-info btn-rounded btn-sm" data-toggle="modal" data-target="#modalAdd">Add<i class="fas fa-plus-square ml-1"></i></a>
+        </div>
+
+        <div class="modal fade modalEditClass" id="modalEdit" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold text-secondary ml-5">Edit Details</h4>
+                <button type="button" class="close text-secondary" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <input type="text" id="step" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="step">TestStep</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="test" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="test">TestCase</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="desc" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="desc">Description</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="urlCode" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="urlCode">Url</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="statu" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="statu">Status</label>
+                </div>
+
+                <div class="md-form mb-5">
+                  <input type="text" id="key" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="key">AuthKey</label>
+                </div>
+
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center editInsideWrapper">
+                <button class="btn btn-outline-secondary btn-block editInside" data-dismiss="modal">Edit
+                  form
+                  <i class="fas fa-paper-plane-o ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center buttonEditWrapper">
+          <button class="btn btn-info btn-rounded btn-sm buttonEdit" data-toggle="modal" data-target="#modalEdit"
+                  disabled>Edit<i class="fas fa-pencil-square-o ml-1"></i></a></button>
+        </div>
+
+        <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDelete" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold ml-5 text-danger">Delete</h4>
+                <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <p class="text-center h4">Are you sure to delete selected row?</p>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center deleteButtonsWrapper">
+                <button type="button" class="btn btn-danger btnYesClass" id="btnYes" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-primary btnNoClass" id="btnNo" data-dismiss="modal">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-danger btn-sm btn-rounded buttonDelete" data-toggle="modal" disabled data-target="#modalDelete"
+                  disabled>Delete<i class="fas fa-times ml-1"></i></a></button>
+        </div>
+      </div>
+        </form>
+
+      <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th class="th-sm">TestStep
+
+            </th>
+            <th class="th-sm">TestCase
+
+            </th>
+            <th class="th-sm">Description
+
+            </th>
+            <th class="th-sm">Url
+
+            </th>
+            <th class="th-sm">Status
+
+            </th>
+            <th class="th-sm">AuthKey
+
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+         </tbody>
+        <tfoot>
+        </tfoot>
+      </table>
+    </div>
+
+  </section>
+
+
+<hr class="mt-4 mb-5">
+
+    <!--Section: Code-->
+
+  <!--Section: Code-->
+
+</section>
+
+
+<style>
+
+  main input[type=email]:focus,
+  main input[type=password]:focus,
+  main input[type=text]:focus,
+  main input[type=url]:focus,
+  main textarea:focus {
+    border: 0;
+  }
+
+  .embed-responsive-16by9-fix-contact-form::before {
+    height: 450px;
+  }
+
+  @media (min-width:580px) {
+
+    .modal-contact-form-fix,
+    .modal-contact-form-fix * {
+
+      box-sizing: content-box !important;
+    }
+
+  }
+
+  @media (min-width: 1400px) {
+    #modalPricing .modal-dialog {
+
+      max-width: 80vw;
+    }
+  }
+
+</style>
+
+
+
+
+    <!-- Modal: modalSnippetSettings -->
+<div class="modal fade" id="modalSnippetSettings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <div id="snippets-settings-preloader" class="checkout-preloader-container d-none">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="settings-modal">Snippet settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden=true>&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+
+            <div class="row mt-2">
+
+              <div class="col-md-7 mb-4">
+
+                <!--Name-->
+                <select class="browser-default custom-select md-selected" id="snippet-package-type">
+                  <option value="" disabled>Type</option>
+                </select>
+
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 mb-4">
+
+                <a role="button" class="btn btn-info btn-md" target="_blank" id="go-pro">Go Pro</a>
+
+              </div>
+              <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <div class="switch mb-2">
+              <label>
+              Public                <input id="snippet-status" type="checkbox">
+                <span class="lever"></span> Private              </label>
+            </div>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Snippet title -->
+            <input type="text" class="form-control mb-3" id="snippet-title" placeholder="Snippet title">
+
+            <!-- Snippet description -->
+            <div class="form-group">
+              <textarea class="form-control" id="snippet-description" rows="5" placeholder="Snippet description"></textarea>
+            </div>
+
+            <!-- Snippet tags -->
+            <div class="chips chips-initial chips-autocomplete mb-0" id="snippet-tag-input"></div>
+            <span id="tags-invalid-feedback" class="small red-text d-none">You can add max. 10 tags with min. length of 2 each</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-elegant" data-dismiss="modal">Close</button>
+        <a role="button" class="btn btn-info" id="save-snippet-settings" data-action="" data-user-nicename="new">Create</a>
+      </div>
+    </div>
+    <!-- Modal content -->
+  </div>
+</div>
+<!-- Modal: modalSnippetSettings -->
+
+<!-- Modal: modalOpenSnippet -->
+<div class="modal fade" id="modalOpenSnippet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div id="open-modal-preloader" class="checkout-preloader-container d-none">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Open snippet</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">Your snippet is ready. Click to open</p>
+      </div>
+      <div class="modal-footer m-auto">
+        <a type="button" class="btn btn-primary open-snippet" target="_blank">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalOpenSnippet -->
+
+<!-- Modal: modalPricing -->
+<div class="modal fade" id="modalPricing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-fluid" role="document">
+        <div class="modal-content">
+            <div class="modal-header border border-bottom border-white" style="height:0px;">
+            <button type="button" class="close py-1 px-2" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="progress md-progress primary-color-dark pricing-modal-preloader" style="display: none;">
+                    <div class="indeterminate"></div>
+                </div>
+                <!-- Section: PRICING Content -->
+                <section id="modalPricingContent"></section>
+                <!-- Section: PRICING Content -->
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dom-target-fb" style="display: none;">
+</div>
+<div id="dom-target-tw" style="display: none;">
+</div>
+<div id="dom-target-gp" style="display: none;">
+</div>
+
+<!-- Compiled JS -->
+    <!--BrandFlow for WordPress loading script-->
+    <script>
+        (function(){
+
+            var scripts = ["/wp-content/themes/mdbootstrap4/js/brandflow/bf-core.min.js", "/wp-content/themes/mdbootstrap4/js/brandflow/NLX453.js"];
+
+
+            for(var i = 0; i < scripts.length; i++) {
+                var script   = document.createElement("script");
+                script.src   = "//mdbootstrap.com" + scripts[i] + "?ts=" + Date.now() + "#";
+                script.async = false;
+                document.head.appendChild(script);
+            }
+
+        })();
+    </script>
+    <!--/.BrandFlow for WordPress loading script-->
+    <link rel='stylesheet' id='woocommerce-currency-switcher-css'  href='https://mdbootstrap.com/wp-content/plugins/woocommerce-currency-switcher/css/front.css?ver=2.3.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/mdbootstrap.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_auth_object = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","redirecturl":"https:\/\/mdbootstrap.com","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var snippets_object = {"wp_ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var example_ajax_obj = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var dynamic_parts_loader = {"wp_ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","page_id":"80412","current_site_lang":"en"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actions = {"is_lang_switched":"0","force_reset":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-admin/load-scripts.php?c=gzip&amp;load%5Bchunk_0%5D=hoverintent-js,admin-bar,wp-embed,jquery-ui-core,jquery-ui-widget,jquery-ui-mouse,jquery-ui-slider&amp;ver=5.4'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.16.0/compiled.1.min.js?ver=4.16.0'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/footer-functions.js?ver=4.16.0-update.6'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=4.0.1'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/mdb3/jquery.validate.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/ajax-auth-script.js?ver=4.16.0-update.3'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/snippets-behavior.js?ver=4.16.0-update.5'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/edit-pencil-behavior.js?ver=4.8.2'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/pricing-modal.js?ver=4.16.0'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/client_notification.js?ver=4.7.3-update.1'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/pages-rates.js?ver=4.16.0'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/dynamic-parts-loader.js?ver=4.16.0-update.2'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce-multilingual/res/js/front-scripts.min.js?ver=4.8.0'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce-multilingual/res/js/cart_widget.min.js?ver=4.8.0'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js?ver=4.0.1'></script>
+<script type='text/javascript'>
+        var woocs_is_mobile = 0;
+        var woocs_special_ajax_mode = 0;
+        var woocs_drop_down_view = "ddslick";
+        var woocs_current_currency = {"name":"EUR","rate":1,"symbol":"&euro;","position":"left_space","is_etalon":0,"hide_cents":1,"hide_on_front":0,"rate_plus":0,"decimals":0,"description":"European Euro","flag":"https:\/\/mdbootstrap.com\/wp-content\/plugins\/woocommerce-currency-switcher\/img\/no_flag.png"};
+        var woocs_default_currency = {"name":"USD","rate":1,"symbol":"&#36;","position":"left","is_etalon":1,"hide_cents":1,"hide_on_front":0,"rate_plus":0,"decimals":0,"description":"USA dollar","flag":"https:\/\/mdbootstrap.com\/wp-content\/plugins\/woocommerce-currency-switcher\/img\/no_flag.png"};
+        var woocs_array_of_get = '{}';
+
+        woocs_array_no_cents = '["JPY","TWD"]';
+
+        var woocs_ajaxurl = "https://mdbootstrap.com/wp-admin/admin-ajax.php";
+        var woocs_lang_loading = "loading";
+        var woocs_shop_is_cached =1;
+
+</script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce-currency-switcher/js/price-slider_33.js?ver=2.3.1'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce-currency-switcher/js/jquery.ddslick.min.js?ver=2.3.1'></script>
+<script type='text/javascript' src='https://mdbootstrap.com/wp-content/plugins/woocommerce-currency-switcher/js/front.js?ver=2.3.1'></script>
+
+
+<script>
+
+
+</script>
+
+<script>
+  $(document).ready(function() {
+    $(".button-collapse").sideNav();
+    var el = document.querySelector('.custom-scrollbar');
+    var ps = new PerfectScrollbar(el);
+  });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  var type = window.location.hash.substr(1);
+  if (type==="docsTabsAPI") {
+    if($("#docsTabsAPI").length) {
+      $('[href="#docsTabsAPI"]').tab('show');
+    }
+    $('html, body').animate({scrollTop:0}, 'slow');
+  } else if (type==="docsTabsOverview") {
+
+    $('html, body').animate({scrollTop:0}, 'slow');
+  }
+
+  var hash = window.location.hash;
+  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+  $('.nav-mtd a').not('#docs-tab-examples').click(function (e) {
+
+    var scrollurl = $('body').scrollTop() || $('html').scrollTop();
+
+    window.location.hash = this.hash;
+    $('html, body').scrollTop(scrollurl);
+  });
+
+})
+</script>
+                                                                                                                                                                                                                                                                                                                                <script>
+"use strict";function _toConsumableArray(arr){return _arrayWithoutHoles(arr)||_iterableToArray(arr)||_nonIterableSpread()}function _nonIterableSpread(){throw new TypeError("Invalid attempt to spread non-iterable instance")}function _iterableToArray(iter){if(Symbol.iterator in Object(iter)||"[object Arguments]"===Object.prototype.toString.call(iter))return Array.from(iter)}function _arrayWithoutHoles(arr){if(Array.isArray(arr)){for(var i=0,arr2=new Array(arr.length);i<arr.length;i++)arr2[i]=arr[i];return arr2}}!function($){$.fn.mdbEditor=function(options){var addSomeClasses=function addSomeClasses(e,classes){return e.addClass(classes)},defaultsFx=function defaultsFx(e,type,element,property){$(e).find("table ".concat(type)).css(element,property)},defaults={headerLength:6,evenTextColor:"#000",oddTextColor:"#000",bgEvenColor:"",bgOddColor:"",thText:"",thBg:"",modalEditor:!1,bubbleEditor:!1,contentEditor:!1,rowEditor:!1,bubblePositionX:80,bubblePositionY:0};return options=$.extend(defaults,options),this.map(function(i,e){var $tableId=$("#".concat($(e).closest(".wrapper-editor").find("table tbody").parent().attr("id"))),$DataTable=$tableId.DataTable(),$wrapperEditor=$tableId.closest(".wrapper-editor"),editorOptions={headerLength:options.headerLength,evenTextColor:options.evenTextColor,oddTextColor:options.oddTextColor,bgEvenColor:options.bgEvenColor,bgOddColor:options.bgOddColor,thText:options.thText,thBg:options.thBg,modalEditor:options.modalEditor,rowEditor:options.rowEditor,bubbleEditor:options.bubbleEditor,contentEditor:options.contentEditor,bubblePositionX:options.bubblePositionX,bubblePositionY:options.bubblePositionY},startedStyleFunction=function startedStyleFunction(){defaultsFx($wrapperEditor,"tr.even","color",_toConsumableArray(editorOptions.evenTextColor).join("")),defaultsFx($wrapperEditor,"tr.odd","color",_toConsumableArray(editorOptions.oddTextColor).join("")),defaultsFx($wrapperEditor,"tr.even","background-color",_toConsumableArray(editorOptions.bgEvenColor).join("")),defaultsFx($wrapperEditor,"tr.odd","background-color",_toConsumableArray(editorOptions.bgOddColor).join("")),defaultsFx($wrapperEditor,"th","color",_toConsumableArray(editorOptions.thText).join("")),defaultsFx($wrapperEditor,"th","background-color",_toConsumableArray(editorOptions.thBg).join(""))},sortingTable=function sortingTable(){startedStyleFunction()};if(startedStyleFunction(),$wrapperEditor.find("table th, .dataTables_paginate").on("click",sortingTable),!0===options.modalEditor){var $selectedRow,$createShowP=$wrapperEditor.find(".createShowP"),$buttonEdit=$wrapperEditor.find(".buttonEdit"),$buttonDelete=$wrapperEditor.find(".buttonDelete"),$buttonAddFormWrapper=$wrapperEditor.find(".buttonAddFormWrapper"),$buttonEditWrapper=$wrapperEditor.find(".buttonEditWrapper"),$editInsideWrapper=$wrapperEditor.find(".editInsideWrapper"),$deleteButtonsWrapper=$wrapperEditor.find(".deleteButtonsWrapper"),editInside=$wrapperEditor.find(".editInside"),trColorSelected=".tr-color-selected",addNewRows=function addNewRows(){for(var $newRow=[],_i=0;_i<editorOptions.headerLength;_i++)$newRow.push($wrapperEditor.find(".addNewInputs input").eq(_i).val());$DataTable.row.add($newRow).draw()},btnToModalAdd=function btnToModalAdd(){$wrapperEditor.find(".addNewInputs input").removeClass("valid").val(""),$wrapperEditor.find(".addNewInputs label").removeClass("active")},addColorToTr=function addColorToTr(e){return $(e.target).parent().not("thead tr").not("tfoot tr").toggleClass("tr-color-selected").siblings().removeClass("tr-color-selected")},toggleDisabledToButtons=function toggleDisabledToButtons(e){$selectedRow=$(e.target).parent(),$(e.target).parent().not("thead tr").not("tfoot tr").hasClass("tr-color-selected")?($buttonEdit.prop("disabled",!1),$buttonDelete.prop("disabled",!1),$createShowP.html("1 row selected")):$("tr").hasClass("tr-color-selected")||($buttonEdit.prop("disabled",!0),$buttonDelete.prop("disabled",!0),$createShowP.html("0 row selected"))},buttonEditInput=function buttonEditInput(){for(var _i2=0;_i2<editorOptions.headerLength;_i2++)$DataTable.row($wrapperEditor.find(".modalEditClass input").eq(_i2).val($DataTable.cell($selectedRow,_i2).data()))},addClassActiveToLabel=function addClassActiveToLabel(){for(var _i3=0;_i3<editorOptions.headerLength;_i3++)""!==$wrapperEditor.find(".modalEditClass input").eq(_i3).val()&&$wrapperEditor.find(".modalEditClass label").eq(_i3).addClass("active")},buttonEditInside=function buttonEditInside(){for(var _i4=0;_i4<editorOptions.headerLength;_i4++)$DataTable.cell($(trColorSelected).find("td").eq(_i4)).data($wrapperEditor.find(".modalEditClass input").eq(_i4).val())},removeColorClassFromTr=function removeColorClassFromTr(){return $wrapperEditor.find(".tr-color-selected").removeClass("tr-color-selected")},disabledButtons=function disabledButtons(){$buttonEdit.prop("disabled",!0),$buttonDelete.prop("disabled",!0)},selectedZeroRowsNews=function selectedZeroRowsNews(){$createShowP.html("0 row selected"),$DataTable.draw(!1)},buttonDeleteYes=function buttonDeleteYes(){$buttonEdit.prop("disabled",!0),$buttonDelete.prop("disabled",!0),$createShowP.html("0 row selected"),$DataTable.row($(trColorSelected)).remove().draw()},bindEvents=function bindEvents(){$buttonAddFormWrapper.on("click",".buttonAdd",addNewRows),$wrapperEditor.on("click","tr",addColorToTr),$wrapperEditor.on("click","tr",toggleDisabledToButtons),$buttonEditWrapper.on("click",$buttonEdit,buttonEditInput),$buttonEditWrapper.on("click",$buttonEdit,addClassActiveToLabel),$deleteButtonsWrapper.on("click",".btnYesClass",buttonDeleteYes),$editInsideWrapper.on("click",editInside,buttonEditInside),$editInsideWrapper.on("click",editInside,removeColorClassFromTr),$editInsideWrapper.on("click",editInside,disabledButtons),$editInsideWrapper.on("click",editInside,selectedZeroRowsNews),$(".wrapperToBtnModalAdd").on("click",".btnToModalAdd",btnToModalAdd)};$wrapperEditor.find(".modalEditClass").on("keypress",function(e){13===e.which&&(buttonEditInside(editInside),$(editInside).trigger("click"),removeColorClassFromTr(),disabledButtons(),selectedZeroRowsNews())}),$wrapperEditor.find(".addNewInputs").on("keypress",function(e){13===e.which&&$(".buttonAdd").click()}),$wrapperEditor.find(".modalDeleteTarget").on("keypress",function(e){13===e.which&&$(".btnYesClass").click()}),bindEvents()}if(!0===options.rowEditor){var editRow=".editRow",saveRow=".saveRow",tdLast="td:last",$removeColumns=$(".removeColumns"),addNewColumn=".addNewColumn",$buttonWrapper=$(".buttons-wrapper"),$closeByClick=$(".closeByClick"),$showForm=$(".showForm");$wrapperEditor.find(".buttons-wrapper button").prop("disabled",!1);var addNewTr=function addNewTr(e){$(e.target).parents().eq(1).map(function(i,event){$(event).find("tr").map(function(i,ev){$(ev).find(tdLast).not(".td-editor").after('<td class="text-center td-editor" style="border-top: 1px solid #dee2e6; border-bottom:1px solid #dee2e6"><button class="btn btn-sm editRow btn-sm btn-teal"><i class="far fa-edit"></i></button></td>')})})},removeDisabledButtons=function removeDisabledButtons(){var $removeColumns=$wrapperEditor.find(".removeColumns");$wrapperEditor.find("td").hasClass("td-editor")&&$removeColumns.prop("disabled",!1)},editRowAndAddClassToTr=function editRowAndAddClassToTr(e){for(var $closestTrTd=$(e.target).closest(".wrapper-editor tr").find("td"),$closestTrEdit=$(e.target).closest(".wrapper-editor tr").find(editRow),divWrapper='<div class="d-flex justify-content-center div-to-remove"></div>',editButton='<td class="text-center td-editor td-yes" style="border:none"><button class="btn btn-sm btn-danger deleteRow" style="cursor:pointer;"><i class="fas fa-trash-alt"></i></b></td>',saveButton='<td class="text-center td-editor td-yes" style="border:none"><button class="btn btn-sm btn-primary saveRow" style="cursor:pointer;"><i class="fas fa-check"></i></button></td>',_i5=0;_i5<editorOptions.headerLength;_i5++)$closestTrTd.eq(_i5).html('<input type="text" class="val'.concat(_i5,' form-control" value="').concat($closestTrTd.eq(_i5).text(),'">'));$closestTrEdit.after($(divWrapper).append(saveButton,editButton)),$wrapperEditor.on("click",".deleteRow",function(){$wrapperEditor.find(".showForm, .closeByClick").removeClass("d-none")})},clickBtnCBCaddDnone=function clickBtnCBCaddDnone(e){addSomeClasses($(e.target),"d-none"),addSomeClasses($showForm,"d-none")},addDnoneByClickBtns=function addDnoneByClickBtns(){addSomeClasses($closeByClick,"d-none"),addSomeClasses($showForm,"d-none")},addColorClassAndPy=function addColorClassAndPy(e){var $closestTr=$(e.target).closest("tr");addSomeClasses($closestTr,"tr-color-selected"),addSomeClasses($closestTr.find("td").not(".td-editor"),"py-5")},addDisabledButtonsByEditBtn=function addDisabledButtonsByEditBtn(e){$(e.target).prop("disabled",!0),$(e.target).closest(".wrapper-editor").find($removeColumns).prop("disabled",!0)},saveRowAndRemovePy=function saveRowAndRemovePy(e){for(var $closestTr=$(e.target).closest("tr"),_i6=0;_i6<editorOptions.headerLength;_i6++)$DataTable.cell($closestTr.find("td").eq(_i6)).data($closestTr.find(".val"+_i6).val());$closestTr.find("td").removeClass("py-5")},removeDisabledColorAdnTdYes=function removeDisabledColorAdnTdYes(e){var $closestTr=$(e.target).closest("tr");$closestTr.find(editRow).prop("disabled",!1),$closestTr.removeClass("tr-color-selected"),$closestTr.find(".td-yes").remove(),$DataTable.draw(!1),$wrapperEditor.find("tbody tr").hasClass("tr-color-selected")||$wrapperEditor.find(".removeColumns").prop("disabled",!1)},saveRowClickRemoveDiv=function saveRowClickRemoveDiv(){$(this).find(".div-to-remove").remove()},removeColorInTrAndDraw=function removeColorInTrAndDraw(){$DataTable.row($wrapperEditor.find("tr.tr-color-selected")).remove().draw(!1),$wrapperEditor.find("tbody tr").hasClass("tr-color-selected")?$wrapperEditor.find($removeColumns).prop("disabled",!0):$wrapperEditor.find($removeColumns).prop("disabled",!1)},removeSelectedButtonsFromRow=function removeSelectedButtonsFromRow(){if($wrapperEditor.find("tbody tr").hasClass("tr-color-selected"))return $wrapperEditor.find(".removeColumns").attr("disabled",!0),!1;$wrapperEditor.find(".td-editor").remove(),$wrapperEditor.find(".tr-color-selected").remove(),$DataTable.draw(!1)},_bindEvents;(function _bindEvents(){$buttonWrapper.on("click",addNewColumn,addNewTr),$buttonWrapper.on("click",addNewColumn,removeDisabledButtons),$wrapperEditor.on("click",editRow,editRowAndAddClassToTr),$wrapperEditor.on("click",editRow,addColorClassAndPy),$wrapperEditor.on("click",editRow,addDisabledButtonsByEditBtn),$wrapperEditor.on("click",saveRow,saveRowAndRemovePy),$wrapperEditor.on("click",saveRow,removeDisabledColorAdnTdYes),$wrapperEditor.on("click",saveRow,saveRowClickRemoveDiv),$(".buttonYesNoWrapper").on("click",".btnYes",removeColorInTrAndDraw),$buttonWrapper.on("click",".removeColumns",removeSelectedButtonsFromRow),$showForm.on("click",".btnYes, .button-x, .btnNo",addDnoneByClickBtns),$closeByClick.on("click",clickBtnCBCaddDnone)})(),!0===$closeByClick.hasClass("d-none")&&$(document).keyup(function(e){27===e.keyCode&&(addSomeClasses($closeByClick,"d-none"),addSomeClasses($showForm,"d-none"))}),$wrapperEditor.find(".buttons-wrapper").on("click",".addNewRows",function(e){for(var $newRow=[],_i7=0;_i7<editorOptions.headerLength;_i7++)$newRow.push($(e.target).val());$("#".concat($(e.target).closest(".wrapper-editor").find("table").attr("id"))).DataTable().row.add($newRow).draw()})}if(!0===options.contentEditor){$wrapperEditor.find("table tbody").addClass("disabled-table");var toggleBtnAndInputs=function toggleBtnAndInputs(){$wrapperEditor.find("tbody").toggleClass("disabled-table"),$(this).find(".fa-toggle-off").toggleClass("fa-toggle-on"),$wrapperEditor.find("table tbody").hasClass("disabled-table")?$wrapperEditor.find("input").prop("disabled",!0):$wrapperEditor.find("input").prop("disabled",!1)},clickOnTd=function clickOnTd(ev){var focusInput=function focusInput(e){return $(e).focus()},$this=$(this),$eTarget=$(ev.target),$dtHeadTitle=$($wrapperEditor.find("thead th")[$DataTable.cell($this).index().column]).text().replace(/\s/g,"").toLowerCase();if("".concat($dtHeadTitle).includes("date")&&!$this.children().hasClass("mdb-content-dynamic-input")?($this.html("<input type='date' class='form-control mdb-content-dynamic-input' value='".concat($this.text(),"'/> <span class='d-none dynamic-span'>").concat($this.text(),"</span>")),focusInput(".mdb-content-dynamic-input")):$this.children().hasClass("mdb-content-dynamic-input")||($this.html("<input type='text' class='form-control mdb-content-dynamic-input' value='".concat($this.text(),"'/> <span class='d-none dynamic-span'>").concat($this.text(),"</span>")),focusInput(".mdb-content-dynamic-input")),$wrapperEditor.find("td").children().length>2){var $dtData=$wrapperEditor.find(".mdb-content-dynamic-input").parent().not($eTarget).html($wrapperEditor.find(".mdb-content-dynamic-input").not($eTarget.children()).val());$DataTable.cell($dtData).data($dtData.text()).draw(),focusInput(".mdb-content-dynamic-input")}},keyupEvents=function keyupEvents(ev){var $evTarget=$(ev.target);13===ev.which&&$DataTable.cell($evTarget.parent()).data($evTarget.val()).draw(!0),27===ev.which&&$DataTable.cell($evTarget.parent()).data($evTarget.next().text()).draw(!0)},saveTdWhenSorting=function saveTdWhenSorting(){for(var $DataTableNodeTd=$DataTable.column($(this)).nodes(),_i8=0;_i8<$DataTableNodeTd.length;_i8++)$($DataTableNodeTd[_i8]).children().length>1&&$DataTable.cell($DataTableNodeTd[_i8]).data($($DataTableNodeTd[_i8]).children().closest(".mdb-content-dynamic-input").val()).draw(!0)},_addNewRows=function _addNewRows(){for(var $newRow=[],_i9=0;_i9<options.headerLength;_i9++)$newRow.push($wrapperEditor.find("thead th").eq(_i9).val());$wrapperEditor.find("tbody td").hasClass("disabled-table")?$($DataTable.row.add($newRow).draw(!0).nodes()).children().addClass("disabled-table"):$DataTable.row.add($newRow).draw(!0)},removeFirstRowOrSelected=function removeFirstRowOrSelected(){$wrapperEditor.find(".mdb-content-dynamic-input").length>0?$DataTable.row($($wrapperEditor.find(".mdb-content-dynamic-input").parents().eq(1))).remove().draw(!0):$DataTable.row().remove().draw(!0)},_bindEvents2;(function _bindEvents2(){$wrapperEditor.find(".buttons-wrapper").on("click",".add-content-edit",toggleBtnAndInputs),$wrapperEditor.find("table").not("thead, tfoot").on("click","td",clickOnTd),$wrapperEditor.not("thead, tfoot").on("keyup click",".mdb-content-dynamic-input",keyupEvents),$wrapperEditor.find(".buttons-wrapper").on("click",".remove-first-tr",removeFirstRowOrSelected),$wrapperEditor.find(".buttons-wrapper").on("click",".add-new-row",_addNewRows),$wrapperEditor.on("click","thead th",saveTdWhenSorting)})()}if(!0===options.bubbleEditor){$wrapperEditor.find(".buttons-wrapper button").prop("disabled",!1);var nth=["","Second ","Third ","Fourth ","Fifth ","Sixth ","Seventh ","Eighth","Ninth ","Tenth ","Eleventh ","Twelth ","Thirteen ","Fourteenth ","Fifteenth ","Sixteenth","Seventeenth","Eighteenth","Nineteenth"],$bubbleMainDiv=$("<div>",{class:"m-3 bubble-main d-flex-not-important flex-column"}),$document=$(document),inWords=function inWords(num){if((num=num.toString()).length>9)return"overflow";var n=("000000000"+num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);if(n){var str="";return str+=0!=n[5]?(""!=str?"and ":"")+(nth[Number(n[5])]||[n[5][0]]+" "+nth[n[5][1]]):""}};$wrapperEditor.find(".buttons-wrapper").on("click",".add-bubble-edit",function(){var $this=$(this);$this.children().hasClass("fa-toggle-off")?($this.not(".fas").html('<i class="fas fa-toggle-on ml-1"></i>'),$wrapperEditor.find("table tbody").removeClass("disabled-table"),$wrapperEditor.find("table td").addClass("bubble-td-cursor"),$wrapperEditor.find("table").not("thead, tfoot").on("click","td",function(ev){var $evTarget=$(ev.target),$dtHeadColumText=$($wrapperEditor.find("table thead th")[$DataTable.cell($evTarget).index().column]).text().replace(/\s/g,""),bubbleMainClass="m-3 p-2 d-flex-not-important justify-content-center flex-column text-left bubble-inside",btnUpadteWithWrapper="<div class='wrapper-btn-bubble-update text-center'><button class='btn btn-sm btn-rounded btn-primary mt-3 btn-bubble-update'>Update <i class='ml-1 far fa-edit'></i></button><button class='btn btn-sm btn-rounded btn-danger mt-3 btn-bubble-clear'>Clear <i class=\"fas fa-eraser\"></i></button></div>",labelWithColumText="<label>".concat($dtHeadColumText,":</label>");if($evTarget.html().match(/^\s*\d[\d,\.]*\s*$/))$bubbleMainDiv.html($("<div>",{class:bubbleMainClass,html:"".concat(labelWithColumText,"<input type='number' class='text-left form-control' value='").concat($evTarget.text(),"'> ").concat(btnUpadteWithWrapper)}));else if("'".concat($dtHeadColumText.toLowerCase(),"'").includes("date"))$bubbleMainDiv.html($("<div>",{class:bubbleMainClass,html:"".concat(labelWithColumText,"<input type='date' class='text-left form-control' value='").concat($evTarget.text(),"'> ").concat(btnUpadteWithWrapper)}));else if("'".concat($dtHeadColumText.toLowerCase(),"'").includes("name")&&$evTarget.text().split(" ").length>=1){for(var $divToMainClass=$("<div class='".concat(bubbleMainClass,"'></div>")),_i10=0;_i10<$evTarget.text().split(" ").length;_i10++)$($bubbleMainDiv.html($divToMainClass.append("<div class='d-flex flex-column wrapper-bubble-label-input'><label class='mt-2 mb-1'>".concat(inWords(_i10)," ").concat($dtHeadColumText,":</label><div class='d-flex'><input type='text' class='text-left form-control' value='").concat($evTarget.text().split(" ").filter(function(i){return i}).splice(_i10,1).toString(),"'><span class='ml-2 wrapper-bubble-input-delete d-flex'><i class='fas fa-plus-circle blue-text bubble-input-add-icon mt-2 mr-1'></i><i class='fas fa-minus-circle red-text bubble-input-delete-icon mt-2'></i></span></div></div>")))).appendTo(btnUpadteWithWrapper),$(".bubble-inside").append(btnUpadteWithWrapper);$bubbleMainDiv.find("label:last").html("Last ".concat($dtHeadColumText,":")),$bubbleMainDiv.find("label:first").html("First ".concat($dtHeadColumText,":")),$divToMainClass.append(btnUpadteWithWrapper)}else $bubbleMainDiv.html($("<div>",{class:bubbleMainClass,html:"<label>".concat($dtHeadColumText,":</label><input type='text' class='text-left form-control' value='").concat($evTarget.text(),"'> ").concat(btnUpadteWithWrapper)}));$('<div class ="bubble-bg"></div>').appendTo("body"),$('<div class ="bubble-arrow"></div>').prependTo($wrapperEditor),$('<span class="text-right position-absolute bubble-span-close" style="top:-8px; right:-8px;"><i class="fas fa-times-circle"></i></span>').prependTo($('<button type="button" class="close text-right bubble-button-x"></button>').prependTo($bubbleMainDiv.prependTo($wrapperEditor)));var $wrapperBtnBubbleUpdate=$(".wrapper-btn-bubble-update"),$wrapperBubbleInputDelete=$(".wrapper-bubble-input-delete"),$bubbleBg=$(".bubble-bg"),$bubbleMain=$(".bubble-main"),$bubbleArrow=$(".bubble-arrow");$evTarget.addClass("tr-color-selected"),$bubbleMain.css({top:ev.pageY-options.bubblePositionX,left:ev.pageX-options.bubblePositionY}),$document.find(".bubble-bg").length>1&&$bubbleBg.not(":last").remove(),$wrapperEditor.find(".bubble-arrow").length>1&&$bubbleArrow.not(":last").remove();var removeBubbleDarkBg=function removeBubbleDarkBg(e){return $(e.target).remove()},removeArrowAndMain=function removeArrowAndMain(){return $(".bubble-main, .bubble-arrow").remove()},removeColorClassFromTd=function removeColorClassFromTd(){return $evTarget.removeClass("tr-color-selected")},takeDataTdIfHasColor=function takeDataTdIfHasColor(e){var $eTarget=$(e.target);if($evTarget.hasClass("tr-color-selected")&&"".concat($dtHeadColumText.toLowerCase()).includes("name")){for(var $new=[],$eventInputs=$eTarget.parent().parent().find("input"),_i11=0;_i11<$eventInputs.length;_i11++)$new.push($eventInputs.eq(_i11).val());$DataTable.cell($evTarget).data($new.toString().split(",").filter(function(i){return i}).join(" ")).draw()}else $evTarget.hasClass("tr-color-selected")&&$DataTable.cell($evTarget).data($eTarget.parent().prev().val()).draw()},findBubbleBgAddRemove=function findBubbleBgAddRemove(){return $document.find(".bubble-bg").remove()},btnUpdateRemoveArrowMain=function btnUpdateRemoveArrowMain(){return removeArrowAndMain()},removeColorFromTr=function removeColorFromTr(){return removeColorClassFromTd()},bubbleSpanRemove=function bubbleSpanRemove(){removeArrowAndMain(),removeColorClassFromTd(),findBubbleBgAddRemove()},btnClearInputs=function btnClearInputs(e){return $(e.target).parents().eq(1).find("input").val("")},keyupEvents=function keyupEvents(e){27===e.keyCode&&(removeArrowAndMain(),removeColorClassFromTd(),findBubbleBgAddRemove()),13===e.keyCode&&$wrapperEditor.find(".btn-bubble-update").click()},deleteClosestInputLabel=function deleteClosestInputLabel(e){$wrapperEditor.find(".bubble-inside input").length>1&&$(e.target).closest(".wrapper-bubble-label-input").remove(),$wrapperEditor.find(".wrapper-bubble-input-delete").first().children().length<2&&$wrapperEditor.find(".wrapper-bubble-input-delete").first().prepend("<i class='fas fa-plus-circle blue-text bubble-input-add-icon mt-2 mr-1'></i>")},addNewInput=function addNewInput(e){var $eTarget=$(e.target),$clondeDiv=$eTarget.parents().eq(2).clone(!0);$clondeDiv.insertAfter($eTarget.parents().eq(2)),$clondeDiv.addClass("cloned"),$clondeDiv.find("label").html("New Input:"),$clondeDiv.find("input").val(""),$clondeDiv.find(".wrapper-bubble-input-delete .fa-plus-circle").remove()},bindTdEvents;(function bindTdEvents(){$bubbleBg.on("click",removeBubbleDarkBg),$bubbleBg.on("click",removeArrowAndMain),$bubbleBg.on("click",removeColorClassFromTd),$wrapperBtnBubbleUpdate.on("click",".btn-bubble-update",takeDataTdIfHasColor),$wrapperBtnBubbleUpdate.on("click",".btn-bubble-update",findBubbleBgAddRemove),$wrapperBtnBubbleUpdate.on("click",".btn-bubble-update",btnUpdateRemoveArrowMain),$wrapperBtnBubbleUpdate.on("click",".btn-bubble-update",removeColorFromTr),$wrapperBtnBubbleUpdate.on("click",".btn-bubble-clear",btnClearInputs),$(".bubble-button-x").on("click",".bubble-span-close",bubbleSpanRemove),$wrapperBubbleInputDelete.on("click",".bubble-input-add-icon",addNewInput),$wrapperBubbleInputDelete.on("click",".bubble-input-delete-icon",deleteClosestInputLabel),$document.on("keyup",keyupEvents)})()})):($this.not(".fas").html('<i class="fas fa-toggle-off ml-1"></i>'),$wrapperEditor.find("table tbody").addClass("disabled-table"),$wrapperEditor.find("table td").not("thead, tfoot").removeClass("bubble-td-cursor"))});var _addNewRows2=function _addNewRows2(){for(var $newRow=[],_i12=0;_i12<editorOptions.headerLength;_i12++)$newRow.push($wrapperEditor.find("table thead th").eq(_i12).val());$DataTable.row.add($newRow).draw(!0)},removeFirstTr=function removeFirstTr(){return $DataTable.row().remove().draw(!0)};$wrapperEditor.find(".buttons-wrapper").on("click",".removeFirstTr",removeFirstTr),$wrapperEditor.find(".buttons-wrapper").on("click",".addNewRow",_addNewRows2)}})}}(jQuery);
+
+  $('#dtBasicExample, #dt-more-columns, #dt-less-columns').mdbEditor({
+    modalEditor: true
+  });
+
+  $('#dtBasicExample-1, #dt-more-row-col, #dt-less-row-col').mdbEditor({
+    rowEditor: true
+  });
+
+
+  let dataSet1 = [
+    ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011-04-25", "$320,800"],
+    ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011-07-25", "$170,750"],
+    ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009-01-12", "$86,000"],
+    ["Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012-03-29", "$433,060"],
+    ["Airi", "Accountant", "Tokyo", "5407", "2008-11-28", "$162,700"],
+    ["Brielle Williamson", "Integration Specialist", "New York", "4804", "2012-12-02",
+      "$372,000"
+    ],
+    ["Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012-08-06", "$137,500"],
+    ["Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010-10-14", "$327,900"],
+    ["Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009-09-15", "$205,500"],
+    ["Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008-12-13", "$103,600"],
+    ["Jena Gaines", "Office Manager", "London", "3814", "2008-12-19", "$90,560"],
+    ["Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013-03-03", "$342,000"],
+    ["Charde Marshall", "Regional Director", "San Francisco", "6741", "2008-10-16", "$470,600"],
+    ["Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012-12-18", "$313,500"],
+    ["Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010-03-17", "$385,750"],
+    ["Michael Silva", "Marketing Designer", "London", "1581", "2012-11-27", "$198,500"],
+    ["Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010-06-09", "$725,000"],
+    ["Gloria Little", "Systems Administrator", "New York", "1721", "2009-04-10", "$237,500"],
+    ["Bradley Greer", "Software Engineer", "London", "2558", "2012-10-13", "$132,000"],
+    ["Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012-09-26", "$217,500"],
+    ["Jenette Caldwell", "Development Lead", "New York", "1937", "2011-09-03", "$345,000"],
+    ["Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009-06-25", "$675,000"],
+    ["Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011-12-12", "$106,450"],
+    ["Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010-09-20", "$85,600"],
+    ["Angelica Ramos", "Chief Executive Officer (CEO)", "London", "5797", "2009-10-09", "$1,200,000"],
+    ["Gavin Joyce", "Developer", "Edinburgh", "8822", "2010-12-22", "$92,575"],
+    ["Jennifer Chang", "Regional Director", "Singapore", "9239", "2010-11-14", "$357,650"],
+    ["Brenden Wagner", "Software Engineer", "San Francisco", "1314", "2011-06-07", "$206,850",
+      "Examples"
+    ],
+    ["Fiona Green", "Chief Operating Officer (COO)", "San Francisco", "2947", "2010-03-11", "$850,000"],
+    ["Shou Itou", "Regional Marketing", "Tokyo", "8899", "2011-08-14", "$163,000"],
+    ["Michelle House", "Integration Specialist", "Sidney", "2769", "2011-06-02", "$95,400"],
+    ["Suki Burks", "Developer", "London", "6832", "2009-10-22", "$114,500"],
+    ["Prescott Bartlett", "Technical Author", "London", "3606", "2011-05-07", "$145,000"],
+    ["Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008-10-26", "$235,500"],
+    ["Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011-03-09", "$324,050"],
+    ["Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009-12-09", "$85,675"]
+  ];
+
+  let dataSet = [
+    ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011-04-25", "$320,800", "Examples"],
+    ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011-07-25", "$170,750", "Examples"],
+    ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009-01-12", "$86,000", "Examples"],
+    ["Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012-03-29", "$433,060", "Examples"],
+    ["Airi", "Accountant", "Tokyo", "5407", "2008-11-28", "$162,700", "Examples"],
+    ["Brielle Williamson", "Integration Specialist", "New York", "4804", "2012-12-02",
+      "$372,000", "Examples"
+    ],
+    ["Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012-08-06", "$137,500", "Examples"],
+    ["Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010-10-14", "$327,900", "Examples"],
+    ["Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009-09-15", "$205,500", "Examples"],
+    ["Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008-12-13", "$103,600", "Examples"],
+    ["Jena Gaines", "Office Manager", "London", "3814", "2008-12-19", "$90,560", "Examples"],
+    ["Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013-03-03", "$342,000", "Examples"],
+    ["Charde Marshall", "Regional Director", "San Francisco", "6741", "2008-10-16", "$470,600", "Examples"],
+    ["Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012-12-18", "$313,500", "Examples"],
+    ["Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010-03-17", "$385,750", "Examples"],
+    ["Michael Silva", "Marketing Designer", "London", "1581", "2012-11-27", "$198,500", "Examples"],
+    ["Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010-06-09", "$725,000", "Examples"],
+    ["Gloria Little", "Systems Administrator", "New York", "1721", "2009-04-10", "$237,500", "Examples"],
+    ["Bradley Greer", "Software Engineer", "London", "2558", "2012-10-13", "$132,000", "Examples"],
+    ["Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012-09-26", "$217,500", "Examples"],
+    ["Jenette Caldwell", "Development Lead", "New York", "1937", "2011-09-03", "$345,000", "Examples"],
+    ["Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009-06-25", "$675,000", "Examples"],
+    ["Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011-12-12", "$106,450", "Examples"],
+    ["Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010-09-20", "$85,600", "Examples"],
+    ["Angelica Ramos", "Chief Executive Officer (CEO)", "London", "5797", "2009-10-09", "$1,200,000", "Examples"],
+    ["Gavin Joyce", "Developer", "Edinburgh", "8822", "2010-12-22", "$92,575", "Examples"],
+    ["Jennifer Chang", "Regional Director", "Singapore", "9239", "2010-11-14", "$357,650", "Examples"],
+    ["Brenden Wagner", "Software Engineer", "San Francisco", "1314", "2011-06-07", "$206,850",
+      "Examples"
+    ],
+    ["Fiona Green", "Chief Operating Officer (COO)", "San Francisco", "2947", "2010-03-11", "$850,000", "Examples"],
+    ["Shou Itou", "Regional Marketing", "Tokyo", "8899", "2011-08-14", "$163,000", "Examples"],
+    ["Michelle House", "Integration Specialist", "Sidney", "2769", "2011-06-02", "$95,400", "Examples"],
+    ["Suki Burks", "Developer", "London", "6832", "2009-10-22", "$114,500", "Examples"],
+    ["Prescott Bartlett", "Technical Author", "London", "3606", "2011-05-07", "$145,000", "Examples"],
+    ["Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008-10-26", "$235,500", "Examples"],
+    ["Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011-03-09", "$324,050", "Examples"],
+    ["Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009-12-09", "$85,675", "Examples"]
+  ];
+
+  $('#ex1, #ex2, #ex3, #ex4').DataTable({
+    data: dataSet,
+    columns: [{
+        title: "Name"
+      },
+      {
+        title: "Position"
+      },
+      {
+        title: "Office"
+      },
+      {
+        title: "Extn."
+      },
+      {
+        title: "Start date"
+      },
+      {
+        title: "Salary"
+      },
+      {
+        title: "Examples"
+      }
+    ]
+  });
+
+
+  $('#exbasic').DataTable({
+    data: dataSet1,
+    columns: [{
+        title: "Name"
+      },
+      {
+        title: "Position"
+      },
+      {
+        title: "Office"
+      },
+      {
+        title: "Extn."
+      },
+      {
+        title: "Start date"
+      },
+      {
+        title: "Salary"
+      }
+    ]
+  });
+
+  $('#ex1').mdbEditor({
+    modalEditor: true,
+    headerLength: 7,
+    evenTextColor: '#AbA6BF',
+    oddTextColor: '#BF988F',
+    bgEvenColor: '#fff',
+    bgOddColor: '#EBF2EA',
+    thText: '#BF988F',
+    thBg: '#fff',
+  });
+
+  $('#ex2').mdbEditor({
+    rowEditor: true,
+    headerLength: 7,
+    evenTextColor: '#00ABE6',
+    oddTextColor: 'rgba(100,120,80, .6)',
+    bgEvenColor: '',
+    bgOddColor: '',
+    thText: '#00ABE6',
+    thBg: '',
+  });
+  $('#ex3').mdbEditor({
+    contentEditor: true,
+    headerLength: 7,
+    evenTextColor: 'rgba(0,0,255, .4)',
+    oddTextColor: 'rgba(100,140,120, .6)',
+    bgEvenColor: '',
+    bgOddColor: '',
+    thText: '#fff',
+    thBg: 'rgba(22, 66, 192, .2)',
+  });
+  $('#ex4').mdbEditor({
+    bubbleEditor: true,
+    headerLength: 7,
+    evenTextColor: 'rgba(255,0,255, .4)',
+    oddTextColor: 'rgba(80,160,110, .6)',
+    bgEvenColor: '',
+    bgOddColor: '',
+    thText: '',
+    thBg: '',
+    bubblePositionX: 300,
+    bubblePositionY: 580
+  });
+
+  $('#contentEx, #bubbleEx').DataTable({
+    data: dataSet,
+    columns: [{
+        title: "TestStep"
+      },
+      {
+        title: "TestCase"
+      },
+      {
+        title: "Description"
+      },
+      {
+        title: "Url"
+      },
+      {
+        title: "Status"
+      },
+      {
+        title: "AuthKey"
+      }
+    ]
+  });
+
+  $('#contentEx').mdbEditor({
+    contentEditor: true
+  });
+
+  $('#bubbleEx').mdbEditor({
+    bubbleEditor: true,
+    bubblePositionX: 300,
+    bubblePositionY: 580
+  });
+
+  $('.dataTables_length').addClass('bs-select');
+</script>
+
+
+<!-- Structured data: Breadcrumbs -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://mdbootstrap.com/",
+        "name": "MDBootstrap",
+        "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://mdbootstrap.com/plugins/",
+        "name": "MD Bootstrap Plugins",
+        "image": "https://mdbootstrap.com/wp-content/uploads/2018/11/mdb-jquery-free.jpg"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "https://mdbootstrap.com/plugins/jquery/",
+        "name": "MD Bootstrap Plugins jQuery",
+        "image": "https://mdbootstrap.com/img/Marketing/docs/social/main-addons.jpg"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@id": "https://mdbootstrap.com/plugins/jquery/table-editor/",
+        "name": "MD Bootstrap Table Editor plugin",
+        "image": "https://mdbootstrap.com/wp-content/uploads/2018/10/plugin-datatable-editor-jquery.jpg"
+      }
+    }]
+  }
+</script>
+
+<!-- Structured data: Article -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mdbootstrap.com/plugins/jquery/table-editor/"
+    },
+    "headline": "Bootstrap table editable - examples & tutorial. Basic & advanced usage",
+    "image": [
+      "https://mdbootstrap.com/wp-content/uploads/2018/10/plugin-datatable-editor-jquery.jpg"
+    ],
+    "datePublished": "2018-06-25T08:00:00+08:00",
+    "dateModified": "2018-06-25T09:20:00+08:00",
+    "author": {
+      "@type": "Organization",
+      "name": "MDBootstrap"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MDBootstrap",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
+      }
+    },
+    "description": "Table editor is an extension that allows you to create customized, fully editable tables. Easy to use, setup and customize."
+  }
+</script>    <script>
+      $(function () {
+        $(".sticky").sticky({
+          topSpacing: 90
+          , zIndex: 2
+          , stopper: "#footer"
+        });
+        $('a[href="#docsTabsAPI"]').on('shown.bs.tab', function (e) {
+
+          $(".sticky2").sticky({
+            topSpacing: 90
+            , zIndex: 2
+            , stopper: "#footer"
+          });
+
+        });
+        $('a[href="#docsTabsExamples"]').on('shown.bs.tab', function (e) {
+
+          $(".sticky3").sticky({
+            topSpacing: 90
+            , zIndex: 2
+            , stopper: "#footer"
+          });
+
+        });
+      });
+    </script>
+
+    </body>
+
+
+</html>
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Page Caching using disk: enhanced
+
+Served from: mdbootstrap.com @ 2020-04-23 20:09:19 by W3 Total Cache
+-->

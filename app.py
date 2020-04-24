@@ -48,11 +48,14 @@ tests_schema = TestSchema(many=True)
 def form():
     return render_template('form.html')
 
+
 def to_pretty_json(value):
     return json.dumps(value, sort_keys=False,
                       indent=4, separators=(',', ': '))
 
+
 app.jinja_env.filters['tojson_pretty'] = to_pretty_json
+
 
 # Create a Product
 @app.route('/rest', methods=['POST', 'GET'])
@@ -89,18 +92,25 @@ def get_product(id):
         test.status = request.form['status']
         test.authkey = request.form['key']
         db.session.commit()
-        flash("Your data has been updated!", "success")
+        flash("Data updated successfully!", "success")
         return redirect(request.referrer)
     else:
         return render_template('update.html', test=test)
 
-@app.route('/delete/<int:id>',methods=['POST', 'GET'])
+
+@app.route('/delete/<int:id>')
 def delete_product(id):
     test = Test.query.get_or_404(id)
     db.session.delete(test)
     db.session.commit()
-    flash("Your Post has been deleted!", "danger")
     return redirect('/rest')
+
+
+@app.route('/all', methods=['POST', 'GET'])
+def show():
+    all_products = Test.query.all()
+    return render_template("detail.html", data=all_products)
+
 
 # Run Server
 if __name__ == '__main__':

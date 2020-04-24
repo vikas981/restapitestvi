@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="10" >
+<title>Bootstrap 4 Simple Table</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+     body{
+     background: url(../../static/image/back.jpg) no-repeat center center fixed;
+     }
+    .bs-example{
+    	margin: 20px;
+    }
+    .container{
+    background-color:#f3f3f1;
+    margin-top: -22px;;
+	padding-top: 50px;;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+ <h1 style="display:inline">All Rest API</h1>
+ <a style="display:inline" class="btn btn-success float-right" href="/">+ Data</a>
+<br>
+<hr>
+<div class="bs-example">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Test Step</th>
+                <th>Test Case</th>
+                <th>Description</th>
+                <th>Url</th>
+                <th>Status</th>
+                <th>Auth Key</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+         {% for test in data  %}
+            <tr>
+                <td>{{test.id}}</td>
+                <td>{{test.teststep}}</td>
+                <td>{{test.testcase}}</td>
+                <td>{{test.description}}</td>
+                <td>{{test.url}}</td>
+                <td>{{test.status}}</td>
+                <td>{{test.authkey}}</td>
+                <td>
+                       <a class="btn btn-primary btn-sm" href="/update/{{test.id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="btn btn-danger btn-sm" href="/delete/{{test.id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+          {% endfor%}
+
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+</html>

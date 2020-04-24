@@ -18,21 +18,23 @@
 {% endwith %}
 <div class="container register">
                 <div class="row">
-                    <div class="col-md-3 register-left">
+                    <div class="col-md-4 register-left">
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
-                         <p>Click to see Updated data</p>
+                        <h3>SEE DATA</h3>
+                         <p class="text-center">
+                           <a class=" btn btn-primary btn-sm" href="/all" role="button">ALL DATA&raquo;</a>
+                        </p>
                         <p class="text-center">
-                           <a class=" btn btn-primary btn-sm" href="/rest" role="button">Click Here&raquo;</a>
-                       </p>
+                           <a class=" btn btn-primary btn-sm" href="/rest" role="button">JSON DATA&raquo;</a>
+                        </p>
                     </div>
-                    <form action="/update/{{test.id}}" method="post" class="col-md-9 register-right">
+                    <form action="/update/{{test.id}}" method="post" class="col-md-8 register-right">
                     <div class="col-md-9 register-right">
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading">UPDATE DETAILS</h3>
                                 <div class="row register-form">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <input type="text" name="teststep" class="form-control" placeholder="Enter TestStep" value="{{test.teststep}}" />
                                         </div>
@@ -42,8 +44,6 @@
                                         <div class="form-group">
                                             <input type="text" name="description" class="form-control" placeholder="Enter Description" value="{{test.description}}" />
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" name="url" class="form-control" placeholder="Enter Url" value="{{test.url}}" />
                                         </div>
@@ -53,7 +53,7 @@
                                         <div class="form-group">
                                             <input type="text" name="key" class="form-control" placeholder="Enter Auth key" value="{{test.authkey}}" />
                                         </div>
-                                          <input type="submit" value="Update">
+                                           <p style="line-height: 60px; text-align: center;"><button type="submit" class="btn btn-success">Update</button></p>
                                     </div>
                                 </div>
                             </div>
