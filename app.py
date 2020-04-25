@@ -82,7 +82,7 @@ def add_product():
 
 # Get Single Products
 @app.route('/update/<int:id>', methods=['POST', 'GET'])
-def get_product(id):
+def update_product(id):
     test = Test.query.get_or_404(id)
     if request.method == 'POST':
         try:
@@ -94,9 +94,9 @@ def get_product(id):
             test.authkey = request.form['key']
             db.session.commit()
             flash("Data updated successfully!", "success")
-            return redirect(request.referrer)
         except Exception:
             return 'There is an issue updating your data'
+        return redirect(request.referrer)
     else:
         return render_template('update.html', test=test)
 
