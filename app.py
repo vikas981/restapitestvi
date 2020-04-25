@@ -85,25 +85,31 @@ def add_product():
 def get_product(id):
     test = Test.query.get_or_404(id)
     if request.method == 'POST':
-        test.teststep = request.form['teststep']
-        test.testcase = request.form['testcase']
-        test.description = request.form['description']
-        test.url = request.form['url']
-        test.status = request.form['status']
-        test.authkey = request.form['key']
-        db.session.commit()
-        flash("Data updated successfully!", "success")
-        return redirect(request.referrer)
+        try:
+            test.teststep = request.form['teststep']
+            test.testcase = request.form['testcase']
+            test.description = request.form['description']
+            test.url = request.form['url']
+            test.status = request.form['status']
+            test.authkey = request.form['key']
+            db.session.commit()
+            flash("Data updated successfully!", "success")
+            return redirect(request.referrer)
+        except Exception:
+            return 'There is an issue updating your data'
     else:
         return render_template('update.html', test=test)
 
 
 @app.route('/delete/<int:id>')
 def delete_product(id):
-    test = Test.query.get_or_404(id)
-    db.session.delete(test)
-    db.session.commit()
-    return redirect('/rest')
+    try:
+        test = Test.query.get_or_404(id)
+        db.session.delete(test)
+        db.session.commit()
+        return redirect('/rest')
+    except Exception:
+        return 'The data you want to detele already deleted by someone.'
 
 
 @app.route('/all', methods=['POST', 'GET'])
