@@ -3,12 +3,23 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import json
 
-# Init app
+
 app = Flask(__name__)
+
+ENV ='prod'
+
+if ENV=='dev':
+    app.debug = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://vikash:Vikas98@a@127.0.0.1:5432/db'
+else:
+    app.debug = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ynwjipgoujnerr:364b15ad3f2af1ad991fb9183ce890301c1493be303e6edafb495457dab29200@ec2-18-210-214-86.compute-1.amazonaws.com:5432/d7u0fsudc4c8ah'
+# Init app
+
 # Database
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+
 
 
 app.secret_key = 'vikash'
@@ -19,13 +30,14 @@ ma = Marshmallow(app)
 
 
 class Test(db.Model):
+    __tablename__ = 'test'
     id = db.Column(db.Integer, primary_key=True)
-    teststep = db.Column(db.String(20), nullable=False)
-    testcase = db.Column(db.String(20), nullable=False)
-    description = db.Column(db.String(200), nullable=False)
-    url = db.Column(db.String(100), nullable=False)
-    status = db.Column(db.Integer, nullable=False)
-    authkey = db.Column(db.String(100), nullable=False)
+    teststep = db.Column(db.String(20))
+    testcase = db.Column(db.String(20))
+    description = db.Column(db.Text())
+    url = db.Column(db.String(100))
+    status = db.Column(db.Integer)
+    authkey = db.Column(db.String(100))
 
     def __init__(self, teststep, testcase, description, url, status, authkey):
         self.teststep = teststep
@@ -61,15 +73,13 @@ app.jinja_env.filters['tojson_pretty'] = to_pretty_json
 
 # Create a Product
 @app.route('/rest', methods=['POST', 'GET'])
-def add_product():
+def get_product():
     if request.method == 'POST':
         teststep = request.form['teststep']
         testcase = request.form['testcase']
         description = request.form['description']
         url = request.form['url']
-        print(url)
-        status = request.form['status']
-        print(status)
+        status = request.form.get('status')
         authkey = request.form['key']
         new_test = Test(teststep, testcase, description, url, status, authkey)
         db.session.add(new_test)
@@ -122,4 +132,4 @@ def show():
 
 # Run Server
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
