@@ -7,8 +7,11 @@ import json
 # Init app
 app = Flask(__name__)
 # Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
+
+
 app.secret_key = 'vikash'
 # Init db
 db = SQLAlchemy(app)
