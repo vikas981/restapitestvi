@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-ENV ='prod'
+ENV ='dev'
 
 if ENV=='dev':
     app.debug = True
@@ -124,9 +124,11 @@ def delete_product(id):
         return 'The data you want to detele already deleted by someone.'
 
 
-@app.route('/all', methods=['POST', 'GET'])
-def show():
-    all_products = Test.query.all()
+@app.route('/all')
+def all():
+    page = request.args.get('page', 1, type=int)
+    all_products = Test.query.order_by(Test.teststep).paginate(page=page, per_page=5)
+    #all_products = Test.query.all()
     return render_template("detail.html", data=all_products)
 
 
