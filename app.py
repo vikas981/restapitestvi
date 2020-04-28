@@ -75,8 +75,8 @@ app.jinja_env.filters['tojson_pretty'] = to_pretty_json
 @app.route('/rest', methods=['POST', 'GET'])
 def get_product():
     if request.method == 'POST':
-        teststep = request.form['teststep']
-        testcase = request.form['testcase']
+        teststep = request.form.get('teststep')
+        testcase = request.form.get('testcase')
         description = request.form['description']
         url = request.form['url']
         status = request.form.get('status')
